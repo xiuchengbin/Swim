@@ -1,409 +1,725 @@
-2020-02-29 18:46:10.506 [restartedMain] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2020-02-29 18:46:56.227 [restartedMain] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2020-02-29 18:46:59.405 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
-2020-02-29 18:46:59.438 [restartedMain] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
-2020-02-29 18:46:59.478 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-02-29 18:46:59.530 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-02-29 18:47:01.676 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
-2020-02-29 18:47:01.689 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-02-29 18:47:01.771 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login;jsessionid=4D7642295003A1BCA594C6C9B013A180", parameters={}
-2020-02-29 18:47:01.779 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toLogin(HttpServletRequest, HttpServletResponse)
-2020-02-29 18:47:02.342 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.384 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/bootstrap.min.css", parameters={}
-2020-02-29 18:47:02.386 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/jquery-1.11.0.js", parameters={}
-2020-02-29 18:47:02.389 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/bootstrap.min.js", parameters={}
-2020-02-29 18:47:02.390 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/Mylogin.js", parameters={}
-2020-02-29 18:47:02.390 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/layui.js", parameters={}
-2020-02-29 18:47:02.391 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/cframe.js", parameters={}
-2020-02-29 18:47:02.400 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.400 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.400 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.400 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.400 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.400 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.425 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.426 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.427 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.427 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.428 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.430 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/base.css", parameters={}
-2020-02-29 18:47:02.432 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.432 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/fonts/iconfont.css", parameters={}
-2020-02-29 18:47:02.433 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.434 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.434 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/layui.css", parameters={}
-2020-02-29 18:47:02.436 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.437 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.438 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/login.css", parameters={}
-2020-02-29 18:47:02.436 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/login.js", parameters={}
-2020-02-29 18:47:02.440 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.440 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.444 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.445 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode", parameters={}
-2020-02-29 18:47:02.445 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
-2020-02-29 18:47:02.445 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.449 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.450 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.679 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/login_bg1.jpg", parameters={}
-2020-02-29 18:47:02.679 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/font/iconfont.woff?v=220", parameters={masked}
-2020-02-29 18:47:02.679 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/login_bg2.jpg", parameters={}
-2020-02-29 18:47:02.681 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.681 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.681 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.691 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.693 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.713 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.803 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/form.js", parameters={}
-2020-02-29 18:47:02.804 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.804 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/carousel.js", parameters={}
-2020-02-29 18:47:02.805 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.811 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.812 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.896 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/layer.js", parameters={}
-2020-02-29 18:47:02.897 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.900 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:02.988 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/layer/default/layer.css?v=3.1.1", parameters={masked}
-2020-02-29 18:47:02.990 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:02.994 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:03.204 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:03.232 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/favicon.ico", parameters={}
-2020-02-29 18:47:03.233 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:47:03.269 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:07.321 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode?timeStamp=Sat%20Feb%2029%202020%2018:47:07%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)", parameters={masked}
-2020-02-29 18:47:07.322 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
-2020-02-29 18:47:07.333 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:13.605 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
-2020-02-29 18:47:13.605 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
-2020-02-29 18:47:13.656 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2020-02-29 18:47:13.657 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [1]
-2020-02-29 18:47:13.661 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:13.676 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/user", parameters={masked}
-2020-02-29 18:47:13.677 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#login(User, String, HttpSession, Model)
-2020-02-29 18:47:14.715 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Failed to complete request: org.apache.shiro.authc.AuthenticationException: Authentication failed for token submission [org.apache.shiro.authc.UsernamePasswordToken - 1, rememberMe=false].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).
-2020-02-29 18:47:14.721 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={masked}
-2020-02-29 18:47:14.723 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
-2020-02-29 18:47:14.723 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 302
-2020-02-29 18:47:14.730 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login", parameters={}
-2020-02-29 18:47:14.730 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toLogin(HttpServletRequest, HttpServletResponse)
-2020-02-29 18:47:14.742 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:14.762 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode", parameters={}
-2020-02-29 18:47:14.762 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
-2020-02-29 18:47:14.777 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:47:58.329 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode?timeStamp=Sat%20Feb%2029%202020%2018:47:58%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)", parameters={masked}
-2020-02-29 18:47:58.329 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
-2020-02-29 18:47:58.339 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:03.992 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
-2020-02-29 18:48:03.992 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
-2020-02-29 18:48:03.993 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2020-02-29 18:48:03.993 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [1]
-2020-02-29 18:48:03.994 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.009 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/user", parameters={masked}
-2020-02-29 18:48:04.009 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#login(User, String, HttpSession, Model)
-2020-02-29 18:48:04.105 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
-2020-02-29 18:48:04.146 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
-2020-02-29 18:48:04.185 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
-2020-02-29 18:48:04.195 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
-2020-02-29 18:48:04.196 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
-2020-02-29 18:48:04.201 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
-2020-02-29 18:48:04.202 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
-2020-02-29 18:48:04.202 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
-2020-02-29 18:48:04.208 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
-2020-02-29 18:48:04.213 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
-2020-02-29 18:48:04.214 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
-2020-02-29 18:48:04.215 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
-2020-02-29 18:48:04.215 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
-2020-02-29 18:48:04.215 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
-2020-02-29 18:48:04.216 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
-2020-02-29 18:48:04.217 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
-2020-02-29 18:48:04.217 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
-2020-02-29 18:48:04.218 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
-2020-02-29 18:48:04.220 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==>  Preparing: select * from user_message where id=? 
-2020-02-29 18:48:04.220 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==> Parameters: 1(Integer)
-2020-02-29 18:48:04.225 [http-nio-8080-exec-5] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - <==      Total: 1
-2020-02-29 18:48:04.231 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.view.RedirectView - View name 'redirect:/index/index', model {user=User{id=null, username='1', password='1', userInfo=null, userMessage=null, account=null, member=null, swimHistory=null}, org.springframework.validation.BindingResult.user=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
-2020-02-29 18:48:04.232 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 302 FOUND
-2020-02-29 18:48:04.243 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index/index", parameters={}
-2020-02-29 18:48:04.243 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toIndex()
-2020-02-29 18:48:04.299 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/jquery-1.11.3.min.js", parameters={}
-2020-02-29 18:48:04.301 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.308 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/base.js", parameters={}
-2020-02-29 18:48:04.299 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/iconfont.js", parameters={}
-2020-02-29 18:48:04.309 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/frameStyle.css", parameters={}
-2020-02-29 18:48:04.310 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.310 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.312 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.313 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.313 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/frame.js", parameters={}
-2020-02-29 18:48:04.313 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.314 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.314 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.317 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.320 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/logo.png", parameters={}
-2020-02-29 18:48:04.320 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.329 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.334 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.456 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/fonts/iconfont.woff2", parameters={}
-2020-02-29 18:48:04.459 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.463 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.543 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.550 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index-main.html", parameters={}
-2020-02-29 18:48:04.550 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.IndexMainController#toIndexMain(Model, HttpServletRequest, HttpSession)
-2020-02-29 18:48:04.552 [http-nio-8080-exec-8] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==>  Preparing: select version() 
-2020-02-29 18:48:04.552 [http-nio-8080-exec-8] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==> Parameters: 
-2020-02-29 18:48:04.555 [http-nio-8080-exec-8] DEBUG com.swim.dao.IDataMapper.getMySQL_version - <==      Total: 1
-2020-02-29 18:48:04.583 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.611 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/font.css", parameters={}
-2020-02-29 18:48:04.612 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/layui.css", parameters={}
-2020-02-29 18:48:04.612 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/xadmin.css", parameters={}
-2020-02-29 18:48:04.613 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.613 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.613 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.615 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.615 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.616 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:04.678 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/lib/layui/css/layui.css", parameters={}
-2020-02-29 18:48:04.679 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.680 [http-nio-8080-exec-10] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
-2020-02-29 18:48:04.680 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
-2020-02-29 18:48:04.681 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
-2020-02-29 18:48:04.681 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2020-02-29 18:48:04.688 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
-2020-02-29 18:48:04.689 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sat Feb 29 18:48:04 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
-2020-02-29 18:48:04.700 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
-2020-02-29 18:48:04.707 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.woff?v=226_rc2", parameters={masked}
-2020-02-29 18:48:04.708 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.709 [http-nio-8080-exec-9] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
-2020-02-29 18:48:04.709 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
-2020-02-29 18:48:04.710 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?v=226_rc2", parameters={masked}
-2020-02-29 18:48:04.710 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2020-02-29 18:48:04.711 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2020-02-29 18:48:04.711 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sat Feb 29 18:48:04 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
-2020-02-29 18:48:04.712 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
-2020-02-29 18:48:04.747 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.ttf?v=226_rc2", parameters={masked}
-2020-02-29 18:48:04.748 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:04.748 [http-nio-8080-exec-2] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
-2020-02-29 18:48:04.748 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
-2020-02-29 18:48:04.749 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?v=226_rc2", parameters={masked}
-2020-02-29 18:48:04.749 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2020-02-29 18:48:04.749 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2020-02-29 18:48:04.750 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sat Feb 29 18:48:04 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
-2020-02-29 18:48:04.750 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
-2020-02-29 18:48:07.456 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user/select_account.html?timesSamp=1582973287450", parameters={masked}
-2020-02-29 18:48:07.457 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toSelectAccount()
-2020-02-29 18:48:07.467 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:07.477 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/tooltip.min.js", parameters={}
-2020-02-29 18:48:07.477 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/tooltip.css", parameters={}
-2020-02-29 18:48:07.477 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/fonts/myCloud.css", parameters={}
-2020-02-29 18:48:07.478 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:07.478 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:07.478 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:07.480 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:07.480 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:07.481 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:07.581 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/user/selectAccount", parameters={}
-2020-02-29 18:48:07.581 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.UserInfoController#selectAccount(HttpSession)
-2020-02-29 18:48:07.601 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserInfoMapper.selectAccount - ==>  Preparing: select * from account where id=? 
-2020-02-29 18:48:07.601 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserInfoMapper.selectAccount - ==> Parameters: 1(Integer)
-2020-02-29 18:48:07.605 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserInfoMapper.selectAccount - <==      Total: 1
-2020-02-29 18:48:07.606 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserInfoMapper.selectMember - ==>  Preparing: select * from member where id=? 
-2020-02-29 18:48:07.606 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserInfoMapper.selectMember - ==> Parameters: 1(Integer)
-2020-02-29 18:48:07.609 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserInfoMapper.selectMember - <==      Total: 1
-2020-02-29 18:48:07.622 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2020-02-29 18:48:07.622 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [User{id=null, username='null', password='null', userInfo=null, userMessage=null, account=Account{id= (truncated)...]
-2020-02-29 18:48:07.626 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:10.201 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/user-add.html?timesSamp=1582973290196", parameters={masked}
-2020-02-29 18:48:10.201 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toAddUser()
-2020-02-29 18:48:10.211 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:10.873 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/user-list;?timesSamp=1582973290866", parameters={masked}
-2020-02-29 18:48:10.873 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toUserList()
-2020-02-29 18:48:10.886 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:10.942 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/table.js", parameters={}
-2020-02-29 18:48:10.943 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:10.944 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:10.961 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/laytpl.js", parameters={}
-2020-02-29 18:48:10.962 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:10.963 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:10.972 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/laypage.js", parameters={}
-2020-02-29 18:48:10.973 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:10.975 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:11.003 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/userList?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:11.003 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.UserManagementController#selectUserList(Integer, Integer)
-2020-02-29 18:48:11.014 [http-nio-8080-exec-4] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==>  Preparing: select count(id) from user 
-2020-02-29 18:48:11.014 [http-nio-8080-exec-4] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==> Parameters: 
-2020-02-29 18:48:11.016 [http-nio-8080-exec-4] DEBUG com.swim.dao.IUserListMapper.selectUserCount - <==      Total: 1
-2020-02-29 18:48:11.048 [http-nio-8080-exec-4] DEBUG com.swim.dao.IUserListMapper.selectUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id order by a.id asc limit 0,10 
-2020-02-29 18:48:11.048 [http-nio-8080-exec-4] DEBUG com.swim.dao.IUserListMapper.selectUser - ==> Parameters: 
-2020-02-29 18:48:11.061 [http-nio-8080-exec-4] DEBUG com.swim.dao.IUserListMapper.selectUser - <==      Total: 10
-2020-02-29 18:48:11.062 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:11.062 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=1, username='1', password='1', userInfo=UserInfo{id=1, status=true, authority=2 (truncated)...]
-2020-02-29 18:48:11.067 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:17.657 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/user-recharge.html;?timesSamp=1582973297650", parameters={masked}
-2020-02-29 18:48:17.657 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toUserRecharge()
-2020-02-29 18:48:17.666 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:17.760 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/userList?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:17.760 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.UserManagementController#selectUserList(Integer, Integer)
-2020-02-29 18:48:17.761 [http-nio-8080-exec-3] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==>  Preparing: select count(id) from user 
-2020-02-29 18:48:17.761 [http-nio-8080-exec-3] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==> Parameters: 
-2020-02-29 18:48:17.762 [http-nio-8080-exec-3] DEBUG com.swim.dao.IUserListMapper.selectUserCount - <==      Total: 1
-2020-02-29 18:48:17.763 [http-nio-8080-exec-3] DEBUG com.swim.dao.IUserListMapper.selectUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id order by a.id asc limit 0,10 
-2020-02-29 18:48:17.763 [http-nio-8080-exec-3] DEBUG com.swim.dao.IUserListMapper.selectUser - ==> Parameters: 
-2020-02-29 18:48:17.781 [http-nio-8080-exec-3] DEBUG com.swim.dao.IUserListMapper.selectUser - <==      Total: 10
-2020-02-29 18:48:17.782 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:17.783 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=1, username='1', password='1', userInfo=UserInfo{id=1, status=true, authority=2 (truncated)...]
-2020-02-29 18:48:17.787 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:19.518 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/vistor.html?timesSamp=1582973299514", parameters={masked}
-2020-02-29 18:48:19.519 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toVistor()
-2020-02-29 18:48:19.529 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:19.611 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/vistorList?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:19.612 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.SwimController#selectSwimmingVistor(Integer, Integer)
-2020-02-29 18:48:19.624 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingVistor - ==>  Preparing: select count(vistor_id) from vistor where swim_end is null 
-2020-02-29 18:48:19.624 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingVistor - ==> Parameters: 
-2020-02-29 18:48:19.633 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingVistor - <==      Total: 1
-2020-02-29 18:48:19.633 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectSwimmingVistor - ==>  Preparing: select * from vistor where swim_end is null 
-2020-02-29 18:48:19.634 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectSwimmingVistor - ==> Parameters: 
-2020-02-29 18:48:19.635 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectSwimmingVistor - <==      Total: 0
-2020-02-29 18:48:19.637 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:19.637 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[], count=0, status=200}]
-2020-02-29 18:48:19.639 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:20.180 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/swim-start.html?timesSamp=1582973300175", parameters={masked}
-2020-02-29 18:48:20.181 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toSwimStart()
-2020-02-29 18:48:20.189 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:20.269 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/userListNoSwim?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:20.270 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.SwimController#selectUserListNoSwim(Integer, Integer)
-2020-02-29 18:48:20.271 [http-nio-8080-exec-6] DEBUG com.swim.dao.ISwimMapper.selectCountNoSwimUser - ==>  Preparing: select count(id) from user_info where swim_status=0 
-2020-02-29 18:48:20.271 [http-nio-8080-exec-6] DEBUG com.swim.dao.ISwimMapper.selectCountNoSwimUser - ==> Parameters: 
-2020-02-29 18:48:20.272 [http-nio-8080-exec-6] DEBUG com.swim.dao.ISwimMapper.selectCountNoSwimUser - <==      Total: 1
-2020-02-29 18:48:20.273 [http-nio-8080-exec-6] DEBUG com.swim.dao.ISwimMapper.selectNoSwimUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id where b.swim_status=0 order by a.id asc limit 0,10 
-2020-02-29 18:48:20.273 [http-nio-8080-exec-6] DEBUG com.swim.dao.ISwimMapper.selectNoSwimUser - ==> Parameters: 
-2020-02-29 18:48:20.280 [http-nio-8080-exec-6] DEBUG com.swim.dao.ISwimMapper.selectNoSwimUser - <==      Total: 10
-2020-02-29 18:48:20.281 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:20.282 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=1, username='1', password='1', userInfo=UserInfo{id=1, status=true, authority=2 (truncated)...]
-2020-02-29 18:48:20.284 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:20.992 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/swim-end.html?timesSamp=1582973300985", parameters={masked}
-2020-02-29 18:48:20.992 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toSwimEnd()
-2020-02-29 18:48:21.000 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:21.096 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/userListSwimming?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:21.096 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.SwimController#selectUserListSwimming(Integer, Integer)
-2020-02-29 18:48:21.098 [http-nio-8080-exec-9] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingUser - ==>  Preparing: select count(id) from user_info where swim_status=1 
-2020-02-29 18:48:21.098 [http-nio-8080-exec-9] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingUser - ==> Parameters: 
-2020-02-29 18:48:21.099 [http-nio-8080-exec-9] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingUser - <==      Total: 1
-2020-02-29 18:48:21.100 [http-nio-8080-exec-9] DEBUG com.swim.dao.ISwimMapper.selectSwimmingUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id left join swim_history f on a.id=f.id and f.swim_end is null where b.swim_status=1 order by f.swim_start asc limit 0,10 
-2020-02-29 18:48:21.100 [http-nio-8080-exec-9] DEBUG com.swim.dao.ISwimMapper.selectSwimmingUser - ==> Parameters: 
-2020-02-29 18:48:21.109 [http-nio-8080-exec-9] DEBUG com.swim.dao.ISwimMapper.selectSwimmingUser - <==      Total: 1
-2020-02-29 18:48:21.111 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:21.111 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=12, username='10', password='10', userInfo=UserInfo{id=12, status=true, authori (truncated)...]
-2020-02-29 18:48:21.112 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:22.432 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-list.html?timesSamp=1582973302424", parameters={masked}
-2020-02-29 18:48:22.433 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsList()
-2020-02-29 18:48:22.440 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:22.517 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goodsList?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:22.517 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.GoodsController#getGoodsList(Integer, Integer)
-2020-02-29 18:48:22.525 [http-nio-8080-exec-4] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==>  Preparing: select count(goods_id) from goods 
-2020-02-29 18:48:22.525 [http-nio-8080-exec-4] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==> Parameters: 
-2020-02-29 18:48:22.534 [http-nio-8080-exec-4] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - <==      Total: 1
-2020-02-29 18:48:22.535 [http-nio-8080-exec-4] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==>  Preparing: select * from goods LIMIT 0,? 
-2020-02-29 18:48:22.536 [http-nio-8080-exec-4] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==> Parameters: 10(Integer)
-2020-02-29 18:48:22.539 [http-nio-8080-exec-4] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - <==      Total: 8
-2020-02-29 18:48:22.540 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:22.540 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[Goods{goodsId=1, goodsName='游泳计时费用', goodsMessage='单位：元/小时', goodsPrice=7.0, goodsType= (truncated)...]
-2020-02-29 18:48:22.542 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:23.167 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-add.html?timesSamp=1582973303160", parameters={masked}
-2020-02-29 18:48:23.168 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsAdd()
-2020-02-29 18:48:23.176 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:25.204 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/points-goods-list.html?timesSamp=1582973305199", parameters={masked}
-2020-02-29 18:48:25.204 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toPointsGoods()
-2020-02-29 18:48:25.211 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:25.297 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/selectPointsGoods?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:25.298 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PointsController#selectPointsGoods(Integer, Integer)
-2020-02-29 18:48:25.305 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==>  Preparing: select count(points_goods_id) from points_goods 
-2020-02-29 18:48:25.305 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==> Parameters: 
-2020-02-29 18:48:25.312 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - <==      Total: 1
-2020-02-29 18:48:25.313 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==>  Preparing: select * from points_goods limit 0,10 
-2020-02-29 18:48:25.313 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==> Parameters: 
-2020-02-29 18:48:25.314 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - <==      Total: 10
-2020-02-29 18:48:25.315 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:25.315 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[PointsGoods{pointsGoodsId=1, pointsGoodsName='一个月会员', pointsGoodsType=1, pointsGoodsVal (truncated)...]
-2020-02-29 18:48:25.316 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:28.254 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/points-goods-add.html?timesSamp=1582973308249", parameters={masked}
-2020-02-29 18:48:28.254 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toPointsGoodsAdd()
-2020-02-29 18:48:28.261 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:30.994 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/swim-history.html?timesSamp=1582973310989", parameters={masked}
-2020-02-29 18:48:30.994 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toSwimHistory()
-2020-02-29 18:48:31.002 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:31.072 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/laydate.js", parameters={}
-2020-02-29 18:48:31.072 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:31.077 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:31.086 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getSwimHistory?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:31.086 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getSwimHistory(Integer, Integer)
-2020-02-29 18:48:31.087 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==>  Preparing: select count(swim_id) from swim_history 
-2020-02-29 18:48:31.087 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==> Parameters: 
-2020-02-29 18:48:31.088 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - <==      Total: 1
-2020-02-29 18:48:31.088 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==>  Preparing: select * from swim_history LIMIT 0,10 
-2020-02-29 18:48:31.088 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==> Parameters: 
-2020-02-29 18:48:31.091 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - <==      Total: 10
-2020-02-29 18:48:31.092 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:31.092 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[SwimHistory{swimId=39, id=8, swimStart=2020-01-27 17:45:30.0, swimEnd=2020-01-27 17:45: (truncated)...]
-2020-02-29 18:48:31.094 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:31.094 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/laydate/default/laydate.css?v=5.0.9", parameters={masked}
-2020-02-29 18:48:31.095 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:31.097 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:31.880 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1582973311874", parameters={masked}
-2020-02-29 18:48:31.880 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
-2020-02-29 18:48:31.888 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:31.970 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:31.970 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
-2020-02-29 18:48:31.972 [http-nio-8080-exec-4] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
-2020-02-29 18:48:31.972 [http-nio-8080-exec-4] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
-2020-02-29 18:48:31.979 [http-nio-8080-exec-4] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
-2020-02-29 18:48:31.980 [http-nio-8080-exec-4] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
-2020-02-29 18:48:31.980 [http-nio-8080-exec-4] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
-2020-02-29 18:48:31.982 [http-nio-8080-exec-4] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
-2020-02-29 18:48:31.982 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:31.983 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
-2020-02-29 18:48:31.986 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:34.701 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/points-goods-list.html?timesSamp=1582973305199", parameters={masked}
-2020-02-29 18:48:34.701 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toPointsGoods()
-2020-02-29 18:48:34.704 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:34.824 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/selectPointsGoods?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:34.825 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PointsController#selectPointsGoods(Integer, Integer)
-2020-02-29 18:48:34.825 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==>  Preparing: select count(points_goods_id) from points_goods 
-2020-02-29 18:48:34.826 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==> Parameters: 
-2020-02-29 18:48:34.827 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - <==      Total: 1
-2020-02-29 18:48:34.827 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==>  Preparing: select * from points_goods limit 0,10 
-2020-02-29 18:48:34.828 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==> Parameters: 
-2020-02-29 18:48:34.832 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - <==      Total: 10
-2020-02-29 18:48:34.833 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:34.833 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[PointsGoods{pointsGoodsId=1, pointsGoodsName='一个月会员', pointsGoodsType=1, pointsGoodsVal (truncated)...]
-2020-02-29 18:48:34.835 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:36.136 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/layer/default/icon.png", parameters={}
-2020-02-29 18:48:36.137 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:36.140 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/layer/default/loading-1.gif", parameters={}
-2020-02-29 18:48:36.140 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
-2020-02-29 18:48:36.141 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/alter-points-goods.html?pointsGoodsId=1", parameters={masked}
-2020-02-29 18:48:36.141 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PointsController#toAlterPointsGoods(Integer, Model)
-2020-02-29 18:48:36.142 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:36.142 [http-nio-8080-exec-7] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsById - ==>  Preparing: select * from points_goods where points_goods_id=? 
-2020-02-29 18:48:36.142 [http-nio-8080-exec-7] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsById - ==> Parameters: 1(Integer)
-2020-02-29 18:48:36.143 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:36.143 [http-nio-8080-exec-7] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsById - <==      Total: 1
-2020-02-29 18:48:36.144 [http-nio-8080-exec-7] DEBUG com.swim.dao.IPointsMapper.getSumWeight - ==>  Preparing: select sum(points_goods_weight) from points_goods 
-2020-02-29 18:48:36.145 [http-nio-8080-exec-7] DEBUG com.swim.dao.IPointsMapper.getSumWeight - ==> Parameters: 
-2020-02-29 18:48:36.145 [http-nio-8080-exec-7] DEBUG com.swim.dao.IPointsMapper.getSumWeight - <==      Total: 1
-2020-02-29 18:48:36.157 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:44.341 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-list.html?timesSamp=1582973302424", parameters={masked}
-2020-02-29 18:48:44.341 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsList()
-2020-02-29 18:48:44.344 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:44.438 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goodsList?page=1&limit=10", parameters={masked}
-2020-02-29 18:48:44.438 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.GoodsController#getGoodsList(Integer, Integer)
-2020-02-29 18:48:44.439 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==>  Preparing: select count(goods_id) from goods 
-2020-02-29 18:48:44.440 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==> Parameters: 
-2020-02-29 18:48:44.441 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - <==      Total: 1
-2020-02-29 18:48:44.441 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==>  Preparing: select * from goods LIMIT 0,? 
-2020-02-29 18:48:44.442 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==> Parameters: 10(Integer)
-2020-02-29 18:48:44.445 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - <==      Total: 8
-2020-02-29 18:48:44.446 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2020-02-29 18:48:44.446 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[Goods{goodsId=1, goodsName='游泳计时费用', goodsMessage='单位：元/小时', goodsPrice=7.0, goodsType= (truncated)...]
-2020-02-29 18:48:44.449 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2020-02-29 18:48:44.697 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-add.html?timesSamp=1582973303160", parameters={masked}
-2020-02-29 18:48:44.698 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsAdd()
-2020-02-29 18:48:44.703 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:01.977 [restartedMain] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-03-06 11:18:04.604 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-03-06 11:18:04.631 [restartedMain] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-03-06 11:18:04.658 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-06 11:18:04.698 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-06 11:18:05.313 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-03-06 11:18:05.346 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-03-06 11:18:05.355 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-03-06 11:18:16.465 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2020-03-06 11:18:16.478 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-03-06 11:18:16.700 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login;jsessionid=5012AB368003C6AB624AEA7A07493B04", parameters={}
+2020-03-06 11:18:16.704 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toLogin(HttpServletRequest, HttpServletResponse)
+2020-03-06 11:18:16.933 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:16.966 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/bootstrap.min.css", parameters={}
+2020-03-06 11:18:16.969 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/jquery-1.11.0.js", parameters={}
+2020-03-06 11:18:16.971 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/Mylogin.js", parameters={}
+2020-03-06 11:18:16.972 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/base.css", parameters={}
+2020-03-06 11:18:16.972 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:16.972 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/fonts/iconfont.css", parameters={}
+2020-03-06 11:18:16.973 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:16.973 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/bootstrap.min.js", parameters={}
+2020-03-06 11:18:16.973 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:16.975 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:16.975 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:16.976 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:16.993 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:16.993 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:16.993 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:16.993 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:16.994 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:16.999 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.001 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/layui.css", parameters={}
+2020-03-06 11:18:17.003 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/login.css", parameters={}
+2020-03-06 11:18:17.003 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/cframe.js", parameters={}
+2020-03-06 11:18:17.003 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/layui.js", parameters={}
+2020-03-06 11:18:17.004 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.007 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/login.js", parameters={}
+2020-03-06 11:18:17.007 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.007 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.007 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.008 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.009 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.011 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.011 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.011 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.012 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.019 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode", parameters={}
+2020-03-06 11:18:17.020 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-03-06 11:18:17.176 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/login_bg2.jpg", parameters={}
+2020-03-06 11:18:17.176 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/login_bg1.jpg", parameters={}
+2020-03-06 11:18:17.177 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/font/iconfont.woff?v=220", parameters={masked}
+2020-03-06 11:18:17.178 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.178 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.178 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.180 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.181 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.197 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.240 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/carousel.js", parameters={}
+2020-03-06 11:18:17.240 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/form.js", parameters={}
+2020-03-06 11:18:17.241 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.242 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.244 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.244 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.305 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/layer.js", parameters={}
+2020-03-06 11:18:17.305 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.308 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.340 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/layer/default/layer.css?v=3.1.1", parameters={masked}
+2020-03-06 11:18:17.341 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:17.344 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:17.418 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.700 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
+2020-03-06 11:18:23.701 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
+2020-03-06 11:18:23.712 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:18:23.712 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [1]
+2020-03-06 11:18:23.715 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.725 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/user", parameters={masked}
+2020-03-06 11:18:23.725 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#login(User, String, HttpSession, Model)
+2020-03-06 11:18:23.737 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-03-06 11:18:23.738 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-03-06 11:18:23.759 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-03-06 11:18:23.763 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-03-06 11:18:23.764 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-03-06 11:18:23.766 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-03-06 11:18:23.766 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-03-06 11:18:23.766 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-03-06 11:18:23.770 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-03-06 11:18:23.773 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-03-06 11:18:23.773 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-03-06 11:18:23.774 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-03-06 11:18:23.774 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-03-06 11:18:23.774 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-03-06 11:18:23.775 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-03-06 11:18:23.775 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-03-06 11:18:23.775 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-03-06 11:18:23.776 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-03-06 11:18:23.777 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==>  Preparing: select * from user_message where id=? 
+2020-03-06 11:18:23.777 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==> Parameters: 1(Integer)
+2020-03-06 11:18:23.781 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - <==      Total: 1
+2020-03-06 11:18:23.785 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.view.RedirectView - View name 'redirect:/index/index', model {user=User{id=null, username='1', password='1', userInfo=null, userMessage=null, account=null, member=null, swimHistory=null}, org.springframework.validation.BindingResult.user=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2020-03-06 11:18:23.786 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 302 FOUND
+2020-03-06 11:18:23.792 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index/index", parameters={}
+2020-03-06 11:18:23.792 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toIndex()
+2020-03-06 11:18:23.824 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/iconfont.js", parameters={}
+2020-03-06 11:18:23.824 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/js/base.js", parameters={}
+2020-03-06 11:18:23.825 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:23.826 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:23.828 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/frame.js", parameters={}
+2020-03-06 11:18:23.830 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/jquery-1.11.3.min.js", parameters={}
+2020-03-06 11:18:23.830 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.830 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:23.830 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:23.830 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.831 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/frameStyle.css", parameters={}
+2020-03-06 11:18:23.832 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.833 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:23.834 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.835 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/logo.png", parameters={}
+2020-03-06 11:18:23.836 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.837 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:23.841 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:23.938 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/fonts/iconfont.woff2", parameters={}
+2020-03-06 11:18:23.939 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:23.941 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:24.041 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:24.048 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index-main.html", parameters={}
+2020-03-06 11:18:24.048 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.IndexMainController#toIndexMain(Model, HttpServletRequest, HttpSession)
+2020-03-06 11:18:24.049 [http-nio-8080-exec-6] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==>  Preparing: select version() 
+2020-03-06 11:18:24.049 [http-nio-8080-exec-6] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==> Parameters: 
+2020-03-06 11:18:24.052 [http-nio-8080-exec-6] DEBUG com.swim.dao.IDataMapper.getMySQL_version - <==      Total: 1
+2020-03-06 11:18:24.097 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:24.109 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/font.css", parameters={}
+2020-03-06 11:18:24.110 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/xadmin.css", parameters={}
+2020-03-06 11:18:24.110 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/layui.css", parameters={}
+2020-03-06 11:18:24.111 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:24.111 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:24.111 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:24.112 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:24.114 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:24.116 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:24.168 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/lib/layui/css/layui.css", parameters={}
+2020-03-06 11:18:24.169 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:24.170 [http-nio-8080-exec-2] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:18:24.170 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:18:24.174 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:18:24.175 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:18:24.182 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+2020-03-06 11:18:24.182 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:18:24 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:18:24.192 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:18:24.200 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.woff?v=226_rc2", parameters={masked}
+2020-03-06 11:18:24.200 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:24.201 [http-nio-8080-exec-10] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:18:24.201 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:18:24.201 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?v=226_rc2", parameters={masked}
+2020-03-06 11:18:24.202 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:18:24.202 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:18:24.202 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:18:24 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:18:24.203 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:18:24.234 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.ttf?v=226_rc2", parameters={masked}
+2020-03-06 11:18:24.235 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:24.236 [http-nio-8080-exec-4] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:18:24.236 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:18:24.237 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?v=226_rc2", parameters={masked}
+2020-03-06 11:18:24.237 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:18:24.238 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:18:24.238 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:18:24 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:18:24.240 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:18:29.321 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/user-add.html?timesSamp=1583464709314", parameters={masked}
+2020-03-06 11:18:29.321 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toAddUser()
+2020-03-06 11:18:29.331 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:29.864 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/user-list;?timesSamp=1583464709859", parameters={masked}
+2020-03-06 11:18:29.864 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toUserList()
+2020-03-06 11:18:29.876 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:29.929 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/table.js", parameters={}
+2020-03-06 11:18:29.930 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:29.936 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:29.946 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/laytpl.js", parameters={}
+2020-03-06 11:18:29.947 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:29.949 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:29.954 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/laypage.js", parameters={}
+2020-03-06 11:18:29.955 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:29.957 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:29.976 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/userList?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:29.976 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.UserManagementController#selectUserList(Integer, Integer)
+2020-03-06 11:18:29.985 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==>  Preparing: select count(id) from user 
+2020-03-06 11:18:29.986 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==> Parameters: 
+2020-03-06 11:18:29.987 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserListMapper.selectUserCount - <==      Total: 1
+2020-03-06 11:18:30.021 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserListMapper.selectUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id order by a.id asc limit 0,10 
+2020-03-06 11:18:30.021 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserListMapper.selectUser - ==> Parameters: 
+2020-03-06 11:18:30.035 [http-nio-8080-exec-5] DEBUG com.swim.dao.IUserListMapper.selectUser - <==      Total: 10
+2020-03-06 11:18:30.036 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:30.037 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=1, username='1', password='1', userInfo=UserInfo{id=1, status=true, authority=2 (truncated)...]
+2020-03-06 11:18:30.059 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:32.376 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/layer/default/icon.png", parameters={}
+2020-03-06 11:18:32.376 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/layer/default/loading-1.gif", parameters={}
+2020-03-06 11:18:32.377 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:32.377 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:32.377 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/alter-user.html?id=1&username=1&name=%E5%90%8D%E5%AD%97&status=true&authority=2&password=1", parameters={masked}
+2020-03-06 11:18:32.377 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toAlterUser()
+2020-03-06 11:18:32.378 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:32.382 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:32.387 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:32.462 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/layedit.js", parameters={}
+2020-03-06 11:18:32.463 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:32.468 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:32.472 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/lay/modules/laydate.js", parameters={}
+2020-03-06 11:18:32.473 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:32.475 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:32.483 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/layui/css/modules/laydate/default/laydate.css?v=5.0.9", parameters={masked}
+2020-03-06 11:18:32.484 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:18:32.485 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:34.537 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/user-recharge.html;?timesSamp=1583464714531", parameters={masked}
+2020-03-06 11:18:34.537 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toUserRecharge()
+2020-03-06 11:18:34.547 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:34.641 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/user-management/userList?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:34.641 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.UserManagementController#selectUserList(Integer, Integer)
+2020-03-06 11:18:34.642 [http-nio-8080-exec-6] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==>  Preparing: select count(id) from user 
+2020-03-06 11:18:34.642 [http-nio-8080-exec-6] DEBUG com.swim.dao.IUserListMapper.selectUserCount - ==> Parameters: 
+2020-03-06 11:18:34.643 [http-nio-8080-exec-6] DEBUG com.swim.dao.IUserListMapper.selectUserCount - <==      Total: 1
+2020-03-06 11:18:34.643 [http-nio-8080-exec-6] DEBUG com.swim.dao.IUserListMapper.selectUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id order by a.id asc limit 0,10 
+2020-03-06 11:18:34.643 [http-nio-8080-exec-6] DEBUG com.swim.dao.IUserListMapper.selectUser - ==> Parameters: 
+2020-03-06 11:18:34.657 [http-nio-8080-exec-6] DEBUG com.swim.dao.IUserListMapper.selectUser - <==      Total: 10
+2020-03-06 11:18:34.657 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:34.658 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=1, username='1', password='1', userInfo=UserInfo{id=1, status=true, authority=2 (truncated)...]
+2020-03-06 11:18:34.662 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:36.546 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/vistor.html?timesSamp=1583464716541", parameters={masked}
+2020-03-06 11:18:36.546 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toVistor()
+2020-03-06 11:18:36.551 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:36.632 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/vistorList?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:36.632 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.SwimController#selectSwimmingVistor(Integer, Integer)
+2020-03-06 11:18:36.645 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingVistor - ==>  Preparing: select count(vistor_id) from vistor where swim_end is null 
+2020-03-06 11:18:36.645 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingVistor - ==> Parameters: 
+2020-03-06 11:18:36.650 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingVistor - <==      Total: 1
+2020-03-06 11:18:36.651 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectSwimmingVistor - ==>  Preparing: select * from vistor where swim_end is null 
+2020-03-06 11:18:36.651 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectSwimmingVistor - ==> Parameters: 
+2020-03-06 11:18:36.653 [http-nio-8080-exec-5] DEBUG com.swim.dao.ISwimMapper.selectSwimmingVistor - <==      Total: 0
+2020-03-06 11:18:36.653 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:36.653 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[], count=0, status=200}]
+2020-03-06 11:18:36.655 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:37.556 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/swim-start.html?timesSamp=1583464717549", parameters={masked}
+2020-03-06 11:18:37.556 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toSwimStart()
+2020-03-06 11:18:37.560 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:37.615 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/userListNoSwim?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:37.615 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.SwimController#selectUserListNoSwim(Integer, Integer)
+2020-03-06 11:18:37.616 [http-nio-8080-exec-7] DEBUG com.swim.dao.ISwimMapper.selectCountNoSwimUser - ==>  Preparing: select count(id) from user_info where swim_status=0 
+2020-03-06 11:18:37.617 [http-nio-8080-exec-7] DEBUG com.swim.dao.ISwimMapper.selectCountNoSwimUser - ==> Parameters: 
+2020-03-06 11:18:37.617 [http-nio-8080-exec-7] DEBUG com.swim.dao.ISwimMapper.selectCountNoSwimUser - <==      Total: 1
+2020-03-06 11:18:37.618 [http-nio-8080-exec-7] DEBUG com.swim.dao.ISwimMapper.selectNoSwimUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id where b.swim_status=0 order by a.id asc limit 0,10 
+2020-03-06 11:18:37.618 [http-nio-8080-exec-7] DEBUG com.swim.dao.ISwimMapper.selectNoSwimUser - ==> Parameters: 
+2020-03-06 11:18:37.624 [http-nio-8080-exec-7] DEBUG com.swim.dao.ISwimMapper.selectNoSwimUser - <==      Total: 10
+2020-03-06 11:18:37.625 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:37.626 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=1, username='1', password='1', userInfo=UserInfo{id=1, status=true, authority=2 (truncated)...]
+2020-03-06 11:18:37.627 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:38.883 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/swim-end.html?timesSamp=1583464718879", parameters={masked}
+2020-03-06 11:18:38.883 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toSwimEnd()
+2020-03-06 11:18:38.888 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:38.963 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/swim-management/userListSwimming?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:38.963 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.SwimController#selectUserListSwimming(Integer, Integer)
+2020-03-06 11:18:38.964 [http-nio-8080-exec-4] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingUser - ==>  Preparing: select count(id) from user_info where swim_status=1 
+2020-03-06 11:18:38.964 [http-nio-8080-exec-4] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingUser - ==> Parameters: 
+2020-03-06 11:18:38.965 [http-nio-8080-exec-4] DEBUG com.swim.dao.ISwimMapper.selectCountSwimmingUser - <==      Total: 1
+2020-03-06 11:18:38.965 [http-nio-8080-exec-4] DEBUG com.swim.dao.ISwimMapper.selectSwimmingUser - ==>  Preparing: select * from user a left join user_info b on a.id=b.id left join user_message c on a.id=c.id left join account d on a.id=d.id left join member e on a.id=e.id left join swim_history f on a.id=f.id and f.swim_end is null where b.swim_status=1 order by f.swim_start asc limit 0,10 
+2020-03-06 11:18:38.965 [http-nio-8080-exec-4] DEBUG com.swim.dao.ISwimMapper.selectSwimmingUser - ==> Parameters: 
+2020-03-06 11:18:38.974 [http-nio-8080-exec-4] DEBUG com.swim.dao.ISwimMapper.selectSwimmingUser - <==      Total: 1
+2020-03-06 11:18:38.975 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:38.975 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[User{id=12, username='10', password='10', userInfo=UserInfo{id=12, status=true, authori (truncated)...]
+2020-03-06 11:18:38.977 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:41.158 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-list.html?timesSamp=1583464721153", parameters={masked}
+2020-03-06 11:18:41.158 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsList()
+2020-03-06 11:18:41.165 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:41.231 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goodsList?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:41.231 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.GoodsController#getGoodsList(Integer, Integer)
+2020-03-06 11:18:41.239 [http-nio-8080-exec-9] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==>  Preparing: select count(goods_id) from goods 
+2020-03-06 11:18:41.239 [http-nio-8080-exec-9] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==> Parameters: 
+2020-03-06 11:18:41.249 [http-nio-8080-exec-9] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - <==      Total: 1
+2020-03-06 11:18:41.249 [http-nio-8080-exec-9] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==>  Preparing: select * from goods LIMIT 0,? 
+2020-03-06 11:18:41.249 [http-nio-8080-exec-9] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==> Parameters: 10(Integer)
+2020-03-06 11:18:41.251 [http-nio-8080-exec-9] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - <==      Total: 8
+2020-03-06 11:18:41.252 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:41.253 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[Goods{goodsId=1, goodsName='游泳计时费用', goodsMessage='单位：元/小时', goodsPrice=7.0, goodsType= (truncated)...]
+2020-03-06 11:18:41.255 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:44.340 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-add.html?timesSamp=1583464724333", parameters={masked}
+2020-03-06 11:18:44.341 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsAdd()
+2020-03-06 11:18:44.347 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:45.766 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/points-goods-list.html?timesSamp=1583464725758", parameters={masked}
+2020-03-06 11:18:45.766 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toPointsGoods()
+2020-03-06 11:18:45.772 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:45.826 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/selectPointsGoods?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:45.826 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PointsController#selectPointsGoods(Integer, Integer)
+2020-03-06 11:18:45.830 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==>  Preparing: select count(points_goods_id) from points_goods 
+2020-03-06 11:18:45.830 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==> Parameters: 
+2020-03-06 11:18:45.839 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - <==      Total: 1
+2020-03-06 11:18:45.840 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==>  Preparing: select * from points_goods limit 0,10 
+2020-03-06 11:18:45.840 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==> Parameters: 
+2020-03-06 11:18:45.841 [http-nio-8080-exec-8] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - <==      Total: 10
+2020-03-06 11:18:45.842 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:45.842 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[PointsGoods{pointsGoodsId=1, pointsGoodsName='一个月会员', pointsGoodsType=1, pointsGoodsVal (truncated)...]
+2020-03-06 11:18:45.843 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:48.632 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/alter-points-goods.html?pointsGoodsId=2", parameters={masked}
+2020-03-06 11:18:48.632 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PointsController#toAlterPointsGoods(Integer, Model)
+2020-03-06 11:18:48.633 [http-nio-8080-exec-5] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsById - ==>  Preparing: select * from points_goods where points_goods_id=? 
+2020-03-06 11:18:48.633 [http-nio-8080-exec-5] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsById - ==> Parameters: 2(Integer)
+2020-03-06 11:18:48.634 [http-nio-8080-exec-5] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsById - <==      Total: 1
+2020-03-06 11:18:48.635 [http-nio-8080-exec-5] DEBUG com.swim.dao.IPointsMapper.getSumWeight - ==>  Preparing: select sum(points_goods_weight) from points_goods 
+2020-03-06 11:18:48.635 [http-nio-8080-exec-5] DEBUG com.swim.dao.IPointsMapper.getSumWeight - ==> Parameters: 
+2020-03-06 11:18:48.635 [http-nio-8080-exec-5] DEBUG com.swim.dao.IPointsMapper.getSumWeight - <==      Total: 1
+2020-03-06 11:18:48.650 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:54.498 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/points-goods-add.html?timesSamp=1583464734493", parameters={masked}
+2020-03-06 11:18:54.499 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toPointsGoodsAdd()
+2020-03-06 11:18:54.507 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:56.448 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/swim-history.html?timesSamp=1583464736440", parameters={masked}
+2020-03-06 11:18:56.448 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toSwimHistory()
+2020-03-06 11:18:56.454 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:56.532 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getSwimHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:56.533 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getSwimHistory(Integer, Integer)
+2020-03-06 11:18:56.534 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==>  Preparing: select count(swim_id) from swim_history 
+2020-03-06 11:18:56.534 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==> Parameters: 
+2020-03-06 11:18:56.534 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - <==      Total: 1
+2020-03-06 11:18:56.535 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==>  Preparing: select * from swim_history LIMIT 0,10 
+2020-03-06 11:18:56.535 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==> Parameters: 
+2020-03-06 11:18:56.536 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - <==      Total: 10
+2020-03-06 11:18:56.536 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:56.537 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[SwimHistory{swimId=39, id=8, swimStart=2020-01-27 17:45:30.0, swimEnd=2020-01-27 17:45: (truncated)...]
+2020-03-06 11:18:56.538 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:58.000 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:18:58.000 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:18:58.007 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:58.091 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:58.092 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:18:58.093 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:18:58.093 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:18:58.100 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:18:58.101 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:18:58.101 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:18:58.104 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:18:58.105 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:58.105 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:18:58.107 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:59.043 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/swim-history.html?timesSamp=1583464736440", parameters={masked}
+2020-03-06 11:18:59.043 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toSwimHistory()
+2020-03-06 11:18:59.046 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:18:59.133 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getSwimHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:18:59.133 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getSwimHistory(Integer, Integer)
+2020-03-06 11:18:59.134 [http-nio-8080-exec-3] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==>  Preparing: select count(swim_id) from swim_history 
+2020-03-06 11:18:59.135 [http-nio-8080-exec-3] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==> Parameters: 
+2020-03-06 11:18:59.137 [http-nio-8080-exec-3] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - <==      Total: 1
+2020-03-06 11:18:59.138 [http-nio-8080-exec-3] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==>  Preparing: select * from swim_history LIMIT 0,10 
+2020-03-06 11:18:59.138 [http-nio-8080-exec-3] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==> Parameters: 
+2020-03-06 11:18:59.140 [http-nio-8080-exec-3] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - <==      Total: 10
+2020-03-06 11:18:59.141 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:18:59.142 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[SwimHistory{swimId=39, id=8, swimStart=2020-01-27 17:45:30.0, swimEnd=2020-01-27 17:45: (truncated)...]
+2020-03-06 11:18:59.144 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:00.876 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:00.877 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:00.879 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:00.938 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:00.938 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:00.939 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:00.939 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:00.939 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:00.940 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:00.940 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:00.942 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:00.943 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:00.943 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:00.945 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:01.789 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/swim-history.html?timesSamp=1583464736440", parameters={masked}
+2020-03-06 11:19:01.789 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toSwimHistory()
+2020-03-06 11:19:01.792 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:01.852 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getSwimHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:01.853 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getSwimHistory(Integer, Integer)
+2020-03-06 11:19:01.853 [http-nio-8080-exec-2] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==>  Preparing: select count(swim_id) from swim_history 
+2020-03-06 11:19:01.853 [http-nio-8080-exec-2] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==> Parameters: 
+2020-03-06 11:19:01.854 [http-nio-8080-exec-2] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - <==      Total: 1
+2020-03-06 11:19:01.854 [http-nio-8080-exec-2] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==>  Preparing: select * from swim_history LIMIT 0,10 
+2020-03-06 11:19:01.854 [http-nio-8080-exec-2] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==> Parameters: 
+2020-03-06 11:19:01.855 [http-nio-8080-exec-2] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - <==      Total: 10
+2020-03-06 11:19:01.856 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:01.856 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[SwimHistory{swimId=39, id=8, swimStart=2020-01-27 17:45:30.0, swimEnd=2020-01-27 17:45: (truncated)...]
+2020-03-06 11:19:01.858 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:02.396 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:02.396 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:02.398 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:02.501 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:02.501 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:02.502 [http-nio-8080-exec-10] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:02.502 [http-nio-8080-exec-10] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:02.503 [http-nio-8080-exec-10] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:02.504 [http-nio-8080-exec-10] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:02.504 [http-nio-8080-exec-10] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:02.505 [http-nio-8080-exec-10] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:02.506 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:02.506 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:02.507 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:04.041 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:04.042 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:04.044 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:04.123 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:04.123 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:04.124 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:04.124 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:04.125 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:04.126 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:04.126 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:04.137 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:04.138 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:04.138 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:04.139 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:04.651 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:04.651 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:04.653 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:04.729 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:04.729 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:04.729 [http-nio-8080-exec-3] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:04.730 [http-nio-8080-exec-3] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:04.730 [http-nio-8080-exec-3] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:04.731 [http-nio-8080-exec-3] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:04.731 [http-nio-8080-exec-3] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:04.733 [http-nio-8080-exec-3] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:04.734 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:04.735 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:04.736 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:05.208 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:05.208 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:05.210 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:05.280 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:05.280 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:05.281 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:05.281 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:05.282 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:05.282 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:05.282 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:05.284 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:05.284 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:05.284 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:05.285 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:06.059 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:06.059 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:06.061 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:06.124 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:06.124 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:06.125 [http-nio-8080-exec-2] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:06.125 [http-nio-8080-exec-2] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:06.126 [http-nio-8080-exec-2] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:06.126 [http-nio-8080-exec-2] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:06.126 [http-nio-8080-exec-2] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:06.128 [http-nio-8080-exec-2] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:06.128 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:06.128 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:06.129 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:07.001 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/swim-history.html?timesSamp=1583464736440", parameters={masked}
+2020-03-06 11:19:07.001 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toSwimHistory()
+2020-03-06 11:19:07.003 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:07.068 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getSwimHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:07.068 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getSwimHistory(Integer, Integer)
+2020-03-06 11:19:07.069 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==>  Preparing: select count(swim_id) from swim_history 
+2020-03-06 11:19:07.069 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==> Parameters: 
+2020-03-06 11:19:07.070 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - <==      Total: 1
+2020-03-06 11:19:07.070 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==>  Preparing: select * from swim_history LIMIT 0,10 
+2020-03-06 11:19:07.070 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==> Parameters: 
+2020-03-06 11:19:07.072 [http-nio-8080-exec-10] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - <==      Total: 10
+2020-03-06 11:19:07.072 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:07.073 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[SwimHistory{swimId=39, id=8, swimStart=2020-01-27 17:45:30.0, swimEnd=2020-01-27 17:45: (truncated)...]
+2020-03-06 11:19:07.074 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:07.501 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:07.501 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:07.504 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:07.568 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:07.569 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:07.569 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:07.569 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:07.570 [http-nio-8080-exec-1] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:07.570 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:07.570 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:07.572 [http-nio-8080-exec-1] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:07.572 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:07.572 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:07.573 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:09.563 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:09.563 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:09.565 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:09.631 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:09.631 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:09.635 [http-nio-8080-exec-3] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:09.635 [http-nio-8080-exec-3] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:09.636 [http-nio-8080-exec-3] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:09.637 [http-nio-8080-exec-3] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:09.637 [http-nio-8080-exec-3] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:09.638 [http-nio-8080-exec-3] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:09.639 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:09.639 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:09.640 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:10.675 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/swim-history.html?timesSamp=1583464736440", parameters={masked}
+2020-03-06 11:19:10.675 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toSwimHistory()
+2020-03-06 11:19:10.680 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:10.763 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getSwimHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:10.763 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getSwimHistory(Integer, Integer)
+2020-03-06 11:19:10.764 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==>  Preparing: select count(swim_id) from swim_history 
+2020-03-06 11:19:10.764 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==> Parameters: 
+2020-03-06 11:19:10.765 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - <==      Total: 1
+2020-03-06 11:19:10.765 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==>  Preparing: select * from swim_history LIMIT 0,10 
+2020-03-06 11:19:10.765 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==> Parameters: 
+2020-03-06 11:19:10.767 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - <==      Total: 10
+2020-03-06 11:19:10.768 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:10.768 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[SwimHistory{swimId=39, id=8, swimStart=2020-01-27 17:45:30.0, swimEnd=2020-01-27 17:45: (truncated)...]
+2020-03-06 11:19:10.769 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:11.925 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:11.926 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:11.927 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:11.998 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:11.999 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:12.000 [http-nio-8080-exec-2] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:12.000 [http-nio-8080-exec-2] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:12.001 [http-nio-8080-exec-2] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:12.002 [http-nio-8080-exec-2] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:12.002 [http-nio-8080-exec-2] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:12.004 [http-nio-8080-exec-2] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:12.004 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:12.005 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:12.006 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:12.660 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:12.660 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:12.662 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:12.727 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:12.727 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:12.728 [http-nio-8080-exec-10] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:12.729 [http-nio-8080-exec-10] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:12.729 [http-nio-8080-exec-10] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:12.730 [http-nio-8080-exec-10] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:12.730 [http-nio-8080-exec-10] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:12.731 [http-nio-8080-exec-10] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:12.732 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:12.732 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:12.733 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:15.423 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/lib/layui/css/layui.css", parameters={}
+2020-03-06 11:19:15.424 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:19:15.425 [http-nio-8080-exec-4] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:19:15.425 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:19:15.425 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:19:15.426 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:19:15.426 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+2020-03-06 11:19:15.426 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:19:15 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:19:15.427 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:19:15.441 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/jquery.min.map", parameters={}
+2020-03-06 11:19:15.442 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:19:15.442 [http-nio-8080-exec-1] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:19:15.442 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:19:15.442 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:19:15.442 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:19:15.443 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:19:15.443 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:19:15 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:19:15.444 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:19:17.383 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583464737993", parameters={masked}
+2020-03-06 11:19:17.383 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:19:17.386 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:17.556 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/jquery.min.map", parameters={}
+2020-03-06 11:19:17.557 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:19:17.558 [http-nio-8080-exec-3] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:19:17.558 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:19:17.558 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:19:17.558 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:19:17.559 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:19:17.559 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:19:17 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:19:17.559 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:19:17.627 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:17.627 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:17.628 [http-nio-8080-exec-6] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:17.628 [http-nio-8080-exec-6] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:17.629 [http-nio-8080-exec-6] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:17.630 [http-nio-8080-exec-6] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:17.630 [http-nio-8080-exec-6] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:17.632 [http-nio-8080-exec-6] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:17.633 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:19:17.633 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:17.635 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:20.255 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:19:20.255 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:19:20.256 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:19:20.256 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:20.257 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:19:20.257 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:19:20.258 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:19:20.259 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:19:20.260 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2020-03-06 11:19:20.260 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:19:20.262 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:19:20.668 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/favicon.ico", parameters={}
+2020-03-06 11:19:20.668 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:19:20.669 [http-nio-8080-exec-5] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:19:20.669 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:19:20.669 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:19:20.670 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:19:20.670 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2020-03-06 11:19:20.670 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:19:20 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:19:20.671 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:20:25.910 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistoryByIdOrTime?id=1&start=&end=&page=1&limit=10", parameters={masked}
+2020-03-06 11:20:25.910 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistoryByIdOrTime(Integer, Integer, Integer, String, String)
+2020-03-06 11:20:25.914 [http-nio-8080-exec-3] DEBUG c.s.d.I.getAllIncomeHistoryCountByIdOrTime - ==>  Preparing: select count(income_id) from income_history WHERE 1=1 and id=? 
+2020-03-06 11:20:25.915 [http-nio-8080-exec-3] DEBUG c.s.d.I.getAllIncomeHistoryCountByIdOrTime - ==> Parameters: 1(Integer)
+2020-03-06 11:20:25.915 [http-nio-8080-exec-3] DEBUG c.s.d.I.getAllIncomeHistoryCountByIdOrTime - <==      Total: 1
+2020-03-06 11:20:25.917 [http-nio-8080-exec-3] DEBUG c.s.d.IIncomeMapper.getAllIncomeHistoryByIdOrTime - ==>  Preparing: select * from income_history WHERE 1=1 and id=? LIMIT 0,10 
+2020-03-06 11:20:25.917 [http-nio-8080-exec-3] DEBUG c.s.d.IIncomeMapper.getAllIncomeHistoryByIdOrTime - ==> Parameters: 1(Integer)
+2020-03-06 11:20:25.918 [http-nio-8080-exec-3] DEBUG c.s.d.IIncomeMapper.getAllIncomeHistoryByIdOrTime - <==      Total: 5
+2020-03-06 11:20:25.918 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:20:25.919 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=4, id=1, source=用户充值, incomeMoney=50.0, time=2020-02-20 14:56:43 (truncated)...]
+2020-03-06 11:20:25.920 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:21:01.167 [restartedMain] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-03-06 11:21:01.413 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-03-06 11:21:01.426 [restartedMain] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-03-06 11:21:01.448 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-06 11:21:01.458 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-06 11:21:01.709 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-03-06 11:21:01.710 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-03-06 11:21:01.712 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-03-06 11:23:10.901 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2020-03-06 11:23:10.904 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-03-06 11:23:10.912 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login", parameters={}
+2020-03-06 11:23:10.912 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toLogin(HttpServletRequest, HttpServletResponse)
+2020-03-06 11:23:10.932 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:10.995 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode", parameters={}
+2020-03-06 11:23:10.995 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-03-06 11:23:11.012 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:11.226 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/css/bootstrap.min.css.map", parameters={}
+2020-03-06 11:23:11.227 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:23:11.275 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:11.374 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/images/favicon.ico", parameters={}
+2020-03-06 11:23:11.376 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:23:11.382 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:18.256 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
+2020-03-06 11:23:18.257 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
+2020-03-06 11:23:18.259 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:23:18.259 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [1]
+2020-03-06 11:23:18.260 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:18.276 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/user", parameters={masked}
+2020-03-06 11:23:18.276 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#login(User, String, HttpSession, Model)
+2020-03-06 11:23:18.286 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-03-06 11:23:18.287 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-03-06 11:23:18.288 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-03-06 11:23:18.289 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-03-06 11:23:18.289 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-03-06 11:23:18.290 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-03-06 11:23:18.290 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-03-06 11:23:18.290 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-03-06 11:23:18.291 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-03-06 11:23:18.292 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-03-06 11:23:18.292 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-03-06 11:23:18.293 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-03-06 11:23:18.294 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-03-06 11:23:18.294 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-03-06 11:23:18.295 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-03-06 11:23:18.295 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-03-06 11:23:18.296 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-03-06 11:23:18.297 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-03-06 11:23:18.297 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==>  Preparing: select * from user_message where id=? 
+2020-03-06 11:23:18.297 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==> Parameters: 1(Integer)
+2020-03-06 11:23:18.298 [http-nio-8080-exec-8] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - <==      Total: 1
+2020-03-06 11:23:18.300 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.view.RedirectView - View name 'redirect:/index/index', model {user=User{id=null, username='1', password='1', userInfo=null, userMessage=null, account=null, member=null, swimHistory=null}, org.springframework.validation.BindingResult.user=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2020-03-06 11:23:18.300 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 302 FOUND
+2020-03-06 11:23:18.307 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index/index", parameters={}
+2020-03-06 11:23:18.307 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toIndex()
+2020-03-06 11:23:18.317 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:18.503 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/jquery.min.map", parameters={}
+2020-03-06 11:23:18.504 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:23:18.505 [http-nio-8080-exec-6] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:23:18.505 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:23:18.505 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:23:18.506 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:23:18.508 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:23:18.509 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:23:18 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:23:18.510 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:23:18.532 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index-main.html", parameters={}
+2020-03-06 11:23:18.533 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.IndexMainController#toIndexMain(Model, HttpServletRequest, HttpSession)
+2020-03-06 11:23:18.533 [http-nio-8080-exec-5] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==>  Preparing: select version() 
+2020-03-06 11:23:18.534 [http-nio-8080-exec-5] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==> Parameters: 
+2020-03-06 11:23:18.535 [http-nio-8080-exec-5] DEBUG com.swim.dao.IDataMapper.getMySQL_version - <==      Total: 1
+2020-03-06 11:23:18.550 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:18.752 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/lib/layui/css/layui.css", parameters={}
+2020-03-06 11:23:18.753 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:23:18.754 [http-nio-8080-exec-3] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:23:18.754 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:23:18.754 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:23:18.754 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:23:18.755 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+2020-03-06 11:23:18.755 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:23:18 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:23:18.756 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:23:18.778 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.woff?v=226_rc2", parameters={masked}
+2020-03-06 11:23:18.779 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:23:18.780 [http-nio-8080-exec-2] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:23:18.780 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:23:18.780 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?v=226_rc2", parameters={masked}
+2020-03-06 11:23:18.781 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:23:18.781 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:23:18.781 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:23:18 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:23:18.782 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:23:18.808 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.ttf?v=226_rc2", parameters={masked}
+2020-03-06 11:23:18.808 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:23:18.809 [http-nio-8080-exec-1] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:23:18.809 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:23:18.809 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?v=226_rc2", parameters={masked}
+2020-03-06 11:23:18.809 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:23:18.809 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:23:18.810 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:23:18 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:23:18.810 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:23:20.815 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1583465000809", parameters={masked}
+2020-03-06 11:23:20.815 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-03-06 11:23:20.818 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-06 11:23:21.006 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/framework/jquery.min.map", parameters={}
+2020-03-06 11:23:21.007 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-03-06 11:23:21.007 [http-nio-8080-exec-10] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-03-06 11:23:21.007 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-06 11:23:21.008 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2020-03-06 11:23:21.008 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-06 11:23:21.009 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-03-06 11:23:21.009 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Fri Mar 06 11:23:21 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-06 11:23:21.010 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-06 11:23:21.073 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-03-06 11:23:21.073 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-03-06 11:23:21.082 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-03-06 11:23:21.083 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-03-06 11:23:21.084 [http-nio-8080-exec-8] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-03-06 11:23:21.084 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-03-06 11:23:21.084 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-03-06 11:23:21.086 [http-nio-8080-exec-8] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-03-06 11:23:21.088 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-03-06 11:23:21.088 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-03-06 11:23:21.092 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
