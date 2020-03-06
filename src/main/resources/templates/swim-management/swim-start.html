@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>游泳开始页面</title>
+	<link rel="stylesheet" href="/layui/css/layui.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+	<script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/layui/layui.js"></script>
+	<script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+<!--	<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+<!--	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">-->
+	<style>
+		.layui-table-view{
+			top:-60px;
+		}
+		.layui-form-select{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+
+<form class="layui-form" action="" style="position: relative;top:10px;">
+	<div class="layui-form-item">
+		<div class="layui-input-inline" style="position: relative;left: 15px;">
+			<input type="text" name="param" id="param"
+				   placeholder="输入搜索关键字" autocomplete="off" class="layui-input" style="position: relative;width: 150px;">
+		</div>
+		<div class="layui-inline" style="width: 50px;">
+			<div class="layui-input-inline">
+				<select id="type">
+					<option value="id" selected>id</option>
+					<option value="username">用户名</option>
+					<option value="name">姓名</option>
+					<option value="phone_number">联系电话</option>
+				</select>
+			</div>
+		</div>
+
+	</div>
+	<div class="layui-form-item" style="position: relative;top:-58px;left:305px; margin-left: 30px;">
+		<div class="layui-input-block" style="margin: 0px;">
+			<p id="select" class="layui-btn" onsubmit='return false';>确定</p>
+		</div>
+	</div>
+</form>
+<table id="demo" lay-filter="test" style="position: relative;">
+
+</table>
+
+<script src="/layui/layui.js"></script>
+<script th:inline="none">
+	window.onload=function () {
+		$("#select").click(function () {
+			selectByType($("#type").val(),$("input[name=param]").val());//参数：type,param(查找类型，参数)
+		});
+		document.getElementById("param").oninput=function () {
+			selectByType($("#type").val(),$("input[name=param]").val());//参数：type,param(查找类型，参数)
+		}
+		// layui.use('form', function(){
+		// 	var form = layui.form;
+		// 	//监听提交
+		// 	form.on('submit(formDemo)', function(data){
+		// 		return false;
+		// 	});
+		// });
+	}
+
+	layui.use('table', function(){
+		var table = layui.table;
+		//第一个实例
+		table.render({
+			elem: '#demo'
+			,height: 485
+			,url: '/swim-management/userListNoSwim' //数据接口
+			,response: {
+				statusName: 'status' //规定数据状态的字段名称，默认：code
+				,statusCode: 200 //规定成功的状态码，默认：0
+				,countName: 'count' //规定数据总数的字段名称，默认：count
+				,dataName: 'data' //规定数据列表的字段名称，默认：data
+			}
+			,page: true //开启分页
+			,cols: [[ //表头
+				{field: 'id', title: 'ID', width:100, align:'center'}
+				,{field: 'username', title: '用户名', width:110, align:'center'}
+				,{field: 'name', title: '姓名', width:110, align:'center',templet: function(d){
+						return d.userMessage.name;
+					}}
+				,{field: 'sex', title: '性别', width:65, align:'center',templet: function(d){
+						return d.userMessage.sex;
+					}}
+				,{field: 'phoneNumber', title: '联系电话', width:150, align:'center',templet: function(d){
+						return d.userMessage.phoneNumber;
+					}}
+				,{field: 'balance', title: '余额', width:90, align:'center',templet: function(d){
+						return d.account.balance;
+					}}
+				,{field: 'remainTime', title: '游泳次数', width:95, align:'center',templet: function(d){
+						return d.account.remainTime;
+					}}
+				,{field: 'memberStatus', title: '会员', width:73, align:'center',templet: function(d){
+						if(d.member.memberStatus==true){
+							return "是";
+						}else{
+							return "否";
+						}
+					}}
+				,{fixed: 'right',title:'操作',width:180, align:'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+			]]
+		});
+		table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+			var data = obj.data; //获得当前行数据
+			var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+			var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+			console.log(data);
+			if(layEvent === 'detail'){ //次数计费
+				$.ajax({
+					type : "post",
+					url : "/swim-management/swimStartByTime",
+					data : {"id":data.id,
+					},
+					async : true, // 同步调用
+					success : function(data) {
+						if(data.substr(0,4)=="操作成功"){
+							layer.alert(data, {icon: 1}, function(index){
+								document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新数据
+								layer.close(index);
+							});
+						}else{
+							layer.alert(data, {icon: 2}, function(index){
+								layer.close(index);
+							});
+						}
+
+					}
+				});
+			} else if(layEvent === 'del'){ //删除
+			} else if(layEvent === 'edit'){ //时间计费
+				//注意：parent 是 JS 自带的全局对象，可用于操作父页面
+				// var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+				$.ajax({
+					type : "post",
+					url : "/swim-management/swimStartByTimer",
+					data : {"id":data.id,
+					},
+					async : true, // 同步调用
+					success : function(data) {
+						if(data.substr(0,4)=="操作成功"){
+							layer.alert(data, {icon: 1}, function(index){
+								document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新数据
+								layer.close(index);
+							});
+						}else{
+							layer.alert(data, {icon: 2}, function(index){
+								layer.close(index);
+							});
+						}
+
+					}
+				});
+			}
+		});
+	});
+
+	function dateFormat(longTime) {
+		if(longTime==null){
+			return "不是会员";
+		}
+		var date = new Date(longTime);
+		var day = ("0" + date.getDate()).slice(-2);
+		var month = ("0" + (date.getMonth() + 1)).slice(-2);
+		var today = date.getFullYear() + "-" + (month) + "-" + (day);
+		return today;
+	}
+	function datetimeFormat(longTime){
+		var dateTypeDate = "";
+		var date = new Date(longTime);
+		dateTypeDate += date.getFullYear();   //年
+		dateTypeDate += "-" + ("0" + (date.getMonth() + 1)).slice(-2); //月
+		dateTypeDate += "-" + ("0" + date.getDate()).slice(-2);   //日
+		dateTypeDate += " " + ("0"+date.getHours(date)).slice(-2);   //时
+		dateTypeDate += ":" + ("0"+date.getMinutes(date)).slice(-2);     //分
+		dateTypeDate += ":" + ("0"+date.getSeconds(date)).slice(-2);     //分
+		return dateTypeDate;
+	}
+
+	function selectByType(type,param) {
+		layui.use('table', function(){
+			var table = layui.table;
+			//第一个实例
+			table.render({
+				elem: '#demo'
+				,height: 485
+				,url: '/swim-management/userListNoSwimByType?type='+type+'&param='+param //数据接口
+				,response: {
+					statusName: 'status' //规定数据状态的字段名称，默认：code
+					,statusCode: 200 //规定成功的状态码，默认：0
+					,countName: 'count' //规定数据总数的字段名称，默认：count
+					,dataName: 'data' //规定数据列表的字段名称，默认：data
+				}
+				,page: true //开启分页
+				,cols: [[ //表头
+					{field: 'id', title: 'ID', width:100, align:'center'}
+					,{field: 'username', title: '用户名', width:110, align:'center'}
+					,{field: 'name', title: '姓名', width:110, align:'center',templet: function(d){
+							return d.userMessage.name;
+						}}
+					,{field: 'sex', title: '性别', width:65, align:'center',templet: function(d){
+							return d.userMessage.sex;
+						}}
+					,{field: 'phoneNumber', title: '联系电话', width:150, align:'center',templet: function(d){
+							return d.userMessage.phoneNumber;
+						}}
+					,{field: 'balance', title: '余额', width:90, align:'center',templet: function(d){
+							return d.account.balance;
+						}}
+					,{field: 'remainTime', title: '游泳次数', width:95, align:'center',templet: function(d){
+							return d.account.remainTime;
+						}}
+					,{field: 'memberStatus', title: '会员', width:73, align:'center',templet: function(d){
+							if(d.member.memberStatus==true){
+								return "是";
+							}else{
+								return "否";
+							}
+						}}
+					,{fixed: 'right',title:'操作',width:180, align:'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+				]]
+			});
+            table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+                var data = obj.data; //获得当前行数据
+                var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+                var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+                console.log(data);
+                if(layEvent === 'detail'){ //次数计费
+                    $.ajax({
+                        type : "post",
+                        url : "/swim-management/swimStartByTime",
+                        data : {"id":data.id,
+                        },
+                        async : true, // 同步调用
+                        success : function(data) {
+                            if(data.substr(0,4)=="操作成功"){
+                                layer.alert(data, {icon: 1}, function(index){
+                                    document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新数据
+                                    layer.close(index);
+                                });
+                            }else{
+                                layer.alert(data, {icon: 2}, function(index){
+                                    layer.close(index);
+                                });
+                            }
+
+                        }
+                    });
+                } else if(layEvent === 'del'){ //删除
+                } else if(layEvent === 'edit'){ //时间计费
+                    //注意：parent 是 JS 自带的全局对象，可用于操作父页面
+                    // var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                    $.ajax({
+                        type : "post",
+                        url : "/swim-management/swimStartByTimer",
+                        data : {"id":data.id,
+                        },
+                        async : true, // 同步调用
+                        success : function(data) {
+                            if(data.substr(0,4)=="操作成功"){
+                                layer.alert(data, {icon: 1}, function(index){
+                                    document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新数据
+                                    layer.close(index);
+                                });
+                            }else{
+                                layer.alert(data, {icon: 2}, function(index){
+                                    layer.close(index);
+                                });
+                            }
+
+                        }
+                    });
+                }
+            });
+
+		});
+	}
+</script>
+<script type="text/html" id="barDemo">
+	<a class="layui-btn layui-btn-xs layui-btn-normal"  lay-event="detail">次数计费</a>
+	<a class="layui-btn layui-btn-xs " lay-event="edit">时间计费</a>
+<!--	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>-->
+
+	<!-- 这里同样支持 laytpl 语法，如： -->
+	{{#  if(d.auth > 2){ }}
+	<a class="layui-btn layui-btn-xs" lay-event="check">审核</a>
+	{{#  } }}
+</script>
+</body>
+</html>

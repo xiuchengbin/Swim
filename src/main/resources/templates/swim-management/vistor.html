@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>散客游泳</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+    <script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+    <!--	<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">-->
+    <style>
+        .layui-table-view{
+            top:-60px;
+        }
+        .layui-form-select{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<form class="layui-form" action="" style="position: relative;top:10px;">
+    <div class="layui-form-item">
+        <div class="layui-input-inline" style="position: relative;left: 15px;">
+            <input type="text" name="param" id="param"
+                   placeholder="输入搜索关键字" autocomplete="off" class="layui-input" style="position: relative;width: 150px;">
+        </div>
+        <div class="layui-inline" style="width: 50px;">
+            <div class="layui-input-inline">
+                <select id="type">
+                    <option value="vistor_id" selected>散客id</option>
+                    <option value="name">姓名</option>
+                    <option value="phone_number">联系电话</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-btn-group" style="position: relative; top: -2px; left: 940px;">
+            <button id="add" type="button" class="layui-btn layui-btn-sm" style="width:60px;height: 40px;"><i class="layui-icon"></i></button>
+        </div>
+
+    </div>
+    <div class="layui-form-item" style="position: relative;top:-58px;left:305px; margin-left: 30px; width: 200px;">
+        <div class="layui-input-block" style="margin: 0px;width: 200px;">
+            <p id="select" class="layui-btn" onsubmit='return false';>确定</p>
+        </div>
+    </div>
+</form>
+<table id="demo" lay-filter="test" style="position: relative;">
+
+</table>
+
+<script src="/layui/layui.js"></script>
+<script th:inline="none">
+    window.onload=function () {
+        $("#select").click(function () {
+            selectByType($("#type").val(),$("input[name=param]").val());//参数：type,param(查找类型，参数)
+        });
+        document.getElementById("param").oninput=function () {
+            selectByType($("#type").val(),$("input[name=param]").val());//参数：type,param(查找类型，参数)
+        }
+        
+        $("#add").click(function () {
+            layer.open({
+                type: 2,
+                title:'添加散客',
+                area: ['500px', '440px'],
+                fixed: false, //不固定
+                maxmin: true,
+                content: '/swim-management/vistor-add.html',
+                // success: function(layero, index){
+                // 	var iframe = window['layui-layer-iframe' + index];
+                // 	iframe.child(''+data.id);
+                // }
+            });
+
+        });
+        // layui.use('form', function(){
+        // 	var form = layui.form;
+        // 	//监听提交
+        // 	form.on('submit(formDemo)', function(data){
+        // 		return false;
+        // 	});
+        // });
+    }
+
+    layui.use('table', function(){
+        var table = layui.table;
+        //第一个实例
+        table.render({
+            elem: '#demo'
+            ,height: 485
+            ,url: '/swim-management/vistorList' //数据接口
+            ,response: {
+                statusName: 'status' //规定数据状态的字段名称，默认：code
+                ,statusCode: 200 //规定成功的状态码，默认：0
+                ,countName: 'count' //规定数据总数的字段名称，默认：count
+                ,dataName: 'data' //规定数据列表的字段名称，默认：data
+            }
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'vistorId', title: '散客ID', width:100, align:'center'}
+                ,{field: 'name', title: '姓名', width:110, align:'center'}
+                ,{field: 'phoneNumber', title: '联系电话', width:160, align:'center'}
+                ,{field: 'balance', title: '押金', width:80, align:'center'}
+                ,{field: 'swimStart', title: '游泳开始时间', width:200, align:'center',templet: function(d){
+                    return datetimeFormat(d.swimStart);
+                    }}
+                ,{fixed: 'right',title:'操作',width:140, align:'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+            ]]
+        });
+        table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+            console.log(data);
+            if(layEvent === 'detail'){ //查看
+                //do somehing
+            } else if(layEvent === 'del'){ //删除
+                layer.confirm('确定要删除吗？', function(index){
+                    $.ajax({					//向服务端发送删除指令
+                        type : "post",
+                        url : "/swim-management/deleteVistor",
+                        data : {"vistorId":data.vistorId},
+                        async : true,
+                        success : function(data) {
+                            if(data=="1"){
+                                layer.alert('删除成功！', {icon: 1});
+                                obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                            }else{
+                                layer.alert('删除失败，请重试！', {icon: 5});//如果有余额不可以删除
+                            }
+                        }
+                    });
+                    layer.close(index);
+                });
+            } else if(layEvent === 'edit'){ //结算
+                //注意：parent 是 JS 自带的全局对象，可用于操作父页面
+                layer.open({
+                    type: 2,
+                    title:'结算页面',
+                    area: ['690px', '500px'],
+                    fixed: false, //不固定
+                    maxmin: true,
+                    content: '/swim-management/vistor-end.html?vistorId='+data.vistorId,
+                    // success: function(layero, index){
+                    // 	var iframe = window['layui-layer-iframe' + index];
+                    // 	iframe.child(''+data.id);
+                    // }
+                });
+                var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+
+            }
+        });
+    });
+
+    function dateFormat(longTime) {
+        var date = new Date(longTime);
+        var day = ("0" + date.getDate()).slice(-2);
+        var month = ("0" + (date.getMonth() + 1)).slice(-2);
+        var today = date.getFullYear() + "-" + (month) + "-" + (day);
+        return today;
+    }
+    function datetimeFormat(longTime){
+        var dateTypeDate = "";
+        var date = new Date(longTime);
+        dateTypeDate += date.getFullYear();   //年
+        dateTypeDate += "-" + ("0" + (date.getMonth() + 1)).slice(-2); //月
+        dateTypeDate += "-" + ("0" + date.getDate()).slice(-2);   //日
+        dateTypeDate += " " + ("0"+date.getHours(date)).slice(-2);   //时
+        dateTypeDate += ":" + ("0"+date.getMinutes(date)).slice(-2);     //分
+        dateTypeDate += ":" + ("0"+date.getSeconds(date)).slice(-2);     //分
+        return dateTypeDate;
+    }
+
+    function selectByType(type,param) {
+        layui.use('table', function(){
+            var table = layui.table;
+            //第一个实例
+            table.render({
+                elem: '#demo'
+                ,height: 485
+                ,url: '/swim-management/vistorListByType?type='+type+'&param='+param //数据接口
+                ,response: {
+                    statusName: 'status' //规定数据状态的字段名称，默认：code
+                    ,statusCode: 200 //规定成功的状态码，默认：0
+                    ,countName: 'count' //规定数据总数的字段名称，默认：count
+                    ,dataName: 'data' //规定数据列表的字段名称，默认：data
+                }
+                ,page: true //开启分页
+                ,cols: [[ //表头
+                    {field: 'vistorId', title: '散客ID', width:100, align:'center'}
+                    ,{field: 'name', title: '姓名', width:110, align:'center'}
+                    ,{field: 'phoneNumber', title: '联系电话', width:160, align:'center'}
+                    ,{field: 'balance', title: '押金', width:80, align:'center'}
+                    ,{field: 'swimStart', title: '游泳开始时间', width:200, align:'center',templet: function(d){
+                            return datetimeFormat(d.swimStart);
+                        }}
+                    ,{fixed: 'right',title:'操作',width:140, align:'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+                ]]
+            });
+            table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+                var data = obj.data; //获得当前行数据
+                var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+                var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+                console.log(data);
+                if(layEvent === 'detail'){ //查看
+                    //do somehing
+                } else if(layEvent === 'del'){ //删除
+                    layer.confirm('确定要删除吗？', function(index){
+                        $.ajax({					//向服务端发送删除指令
+                            type : "post",
+                            url : "/swim-management/deleteVistor",
+                            data : {"vistorId":data.vistorId},
+                            async : true,
+                            success : function(data) {
+                                if(data=="1"){
+                                    layer.alert('删除成功！', {icon: 1});
+                                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                }else{
+                                    layer.alert('删除失败，请重试！', {icon: 5});//如果有余额不可以删除
+                                }
+                            }
+                        });
+                        layer.close(index);
+                    });
+                } else if(layEvent === 'edit'){ //结算
+                    //注意：parent 是 JS 自带的全局对象，可用于操作父页面
+                    layer.open({
+                        type: 2,
+                        title:'结算页面',
+                        area: ['690px', '500px'],
+                        fixed: false, //不固定
+                        maxmin: true,
+                        content: '/swim-management/vistor-end.html?vistorId='+data.vistorId,
+                        // success: function(layero, index){
+                        // 	var iframe = window['layui-layer-iframe' + index];
+                        // 	iframe.child(''+data.id);
+                        // }
+                    });
+                    var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+
+                }
+            });
+        });
+    }
+</script>
+<script type="text/html" id="barDemo">
+    <!--	<a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>-->
+    <a class="layui-btn layui-btn-xs" lay-event="edit">结算</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+
+    <!-- 这里同样支持 laytpl 语法，如： -->
+    {{#  if(d.auth > 2){ }}
+    <a class="layui-btn layui-btn-xs" lay-event="check">审核</a>
+    {{#  } }}
+</script>
+</body>
+</html>

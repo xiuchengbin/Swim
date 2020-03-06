@@ -1,0 +1,6 @@
+2020-02-24 00:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-24 00:01:14.604 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-24 00:01:14.605 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-24 00:11:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-24 00:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-24 00:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0

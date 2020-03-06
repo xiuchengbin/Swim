@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+    <meta name="renderer" content="webkit">
+    <!--国产浏览器高速模式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="穷在闹市" />
+    <!-- 作者 -->
+    <meta name="revised" content="穷在闹市.v3, 2019/05/01" />
+    <!-- 定义页面的最新版本 -->
+    <meta name="description" content="网站简介" />
+    <!-- 网站简介 -->
+    <meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+    <title>添加散客</title>
+
+    <!-- 公共样式 开始 -->
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+    <script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+    <!-- 公共样式 结束 -->
+
+    <style>
+        .layui-form{
+            margin-right: 30%;
+        }
+        input{
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="cBody" style="left: 26%; width: 400px;">
+    <form class="layui-form layui-form-pane"  id="user">
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">散客id：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${vistor.vistorId}"  style="border: none;" disabled  type="text" name="vistorId" maxlength="5"  autocomplete="off" class="layui-input" >
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">姓名：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${vistor.name}"  style="border: none;" disabled type="text" name="name" autocomplete="off" class="layui-input" >
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">联系电话：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${vistor.phoneNumber}" style="border: none;" disabled type="text" name=""   autocomplete="off" class="layui-input" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">押金：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${vistor.balance}" style="border: none;" disabled type="text" name=""  autocomplete="off" class="layui-input" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">游泳时间：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${swimTime}" style="border: none;" disabled type="text" name=""  autocomplete="off" class="layui-input" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">花费金额：</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" th:value="${cost}" name="cost" style="border: none;"  disabled   autocomplete="off" class="layui-input" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <input th:value="${swimEnd}" name="swimEnd" style="display: none">
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">退款金额：</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" th:value="${returnMoney}" name="" style="border: none;" disabled   autocomplete="off" class="layui-input" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button id="end" style="position: relative;right: 60px;" class="layui-btn" lay-submit lay-filter="submitBut">结算</button>
+            </div>
+        </div>
+    </form>
+    <div class="layui-form-item" style="position: relative;left: 83px;top:-53px; margin-left: 50px;">
+        <div class="layui-input-block">
+            <button id="shua" class="layui-btn layui-btn-primary" style="position:relative; left: -40px;">刷新</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    window.onload=function () {
+        setInterval(function () {
+            location.replace(location.href);
+        }, 1200000);//2分钟刷新一次
+
+        layui.use('form', function() {
+            var form = layui.form;
+            //监听提交
+            form.on('submit(submitBut)', function(data) {
+                // layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+        $("#shua").click(function () {
+            location.replace(location.href);
+        });
+        
+        $("#end").click(function () {
+            $.ajax({
+                type : "post",
+                url : "/swim-management/endSwimVistor",
+                data : {
+                    vistorId: $("input[name=vistorId]").val(),
+                    cost: $("input[name=cost]").val(),
+                    swimEnd: $("input[name=swimEnd]").val()
+                },
+                async : true, // 同步调用
+                success : function(data) {
+                    if(data==1){
+                        layer.alert('结算成功！', {icon: 1}, function(index){
+                            parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                            layer.close(index);
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.alert('结算失败！', {icon: 5}, function(index){
+                            layer.close(index);
+                            location.replace(location.href);
+                        });
+                    }
+
+                },
+                error: function () {
+                    layer.alert('结算失败！', {icon: 5}, function(index){
+                        layer.close(index);
+                        location.replace(location.href);
+                    });
+                }
+            });
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+</script>
+</body>
+</html>

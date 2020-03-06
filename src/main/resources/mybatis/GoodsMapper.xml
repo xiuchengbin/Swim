@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.swim.dao.IGoodsMapper" >
+
+    <select id="getAllSwimHistoryByIdOrTime"  resultType="com.swim.entity.SwimHistory">
+        select * from swim_history
+        <where>
+        1=1
+            <if test="id!='' and id!=null">
+               and id=#{id}
+            </if>
+            <if test=" startTime!='' and startTime!=null and endTime!='' and endTime!=null ">
+                and DATEDIFF(swim_start,#{startTime})&gt;=0 and DATEDIFF(swim_start,#{endTime}) &lt;=0
+            </if>
+        </where>
+        LIMIT ${start},${limit}
+    </select>
+
+    <select id="getAllSwimHistoryCountByIdOrTime"  resultType="int">
+        select count(swim_id) from swim_history
+        <where>
+        1=1
+            <if test="id!='' and id!=null">
+               and id=#{id}
+            </if>
+            <if test=" start!='' and start!=null and end!='' and end!=null ">
+                and DATEDIFF(swim_start,#{start})&gt;=0 and DATEDIFF(swim_start,#{end}) &lt;=0
+            </if>
+        </where>
+    </select>
+</mapper>

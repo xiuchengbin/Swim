@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.swim.dao.ISwimMapper" >
+    <select id="selectNoSwimUser" resultMap="selectUserMap" resultType="com.swim.entity.User">
+        select * from user a left join user_info b on a.id=b.id
+        left join user_message c on a.id=c.id
+        left join account d on a.id=d.id
+        left join member e on a.id=e.id where b.swim_status=0 order by a.id asc limit ${start},${limit}
+    </select>
+
+    <select id="selectSwimmingUser" resultMap="selectUserSwimmingMap" resultType="com.swim.entity.User">
+        select * from user a left join user_info b on a.id=b.id
+        left join user_message c on a.id=c.id
+        left join account d on a.id=d.id
+        left join member e on a.id=e.id
+        left join swim_history f on a.id=f.id and f.swim_end is null
+        where b.swim_status=1 order by f.swim_start asc limit ${start},${limit}
+    </select>
+
+    <select id="selectNoSwimUserByType" resultMap="selectUserMap" resultType="com.swim.entity.User">
+        select * from user a left join user_info b on a.id=b.id
+        left join user_message c on a.id=c.id
+        left join account d on a.id=d.id
+        left join member e on a.id=e.id where b.swim_status=0 and
+                    <if test="type=='id' or type=='username'">
+                        a.${type} LIKE #{param}
+                    </if>
+                    <if test="type=='name' or type=='phone_number'">
+                        c.${type} LIKE #{param}
+                    </if>
+        order by a.id asc limit ${start},${limit}
+    </select>
+
+    <select id="selectSwimmingUserByType" resultMap="selectUserSwimmingMap" resultType="com.swim.entity.User">
+        select * from user a left join user_info b on a.id=b.id
+        left join user_message c on a.id=c.id
+        left join account d on a.id=d.id
+        left join member e on a.id=e.id
+        left join swim_history f on a.id=f.id and f.swim_end is null
+        where b.swim_status=1 and
+        <if test="type=='id' or type=='username'">
+            a.${type} LIKE #{param}
+        </if>
+        <if test="type=='name' or type=='phone_number'">
+            c.${type} LIKE #{param}
+        </if>
+        order by f.swim_start asc limit ${start},${limit}
+    </select>
+
+    <select id="selectUserById" resultMap="selectUserMap" resultType="com.swim.entity.User">
+            select * from user a left join user_info b on a.id=b.id
+    left join user_message c on a.id=c.id
+    left join account d on a.id=d.id
+    left join member e on a.id=e.id where a.id=#{id}
+    </select>
+
+    <select id="selectUserAndSwimHistoryById" resultMap="selectUserSwimmingMap" resultType="com.swim.entity.User">
+        select * from user a left join user_info b on a.id=b.id
+        left join user_message c on a.id=c.id
+        left join account d on a.id=d.id
+        left join member e on a.id=e.id
+        left join swim_history f on a.id=f.id and f.swim_end is null
+        where b.swim_status=1 and a.id=#{id}
+    </select>
+
+    <resultMap id="selectUserSwimmingMap" type="com.swim.entity.User">
+        <id property="id" column="id" />
+        <id property="username" column="username" />
+        <id property="password" column="password" />
+        <association property="userInfo" javaType="com.swim.entity.UserInfo">
+            <id property="id" column="id" />
+            <id property="status" column="status" />
+            <id property="authority" column="authority" />
+            <id property="createTime" column="create_time" />
+            <id property="swimStatus" column="swim_status" />
+        </association>
+        <association property="userMessage" javaType="com.swim.entity.UserMessage">
+            <id property="id" column="id" />
+            <id property="name" column="name" />
+            <id property="sex" column="sex" />
+            <id property="birthday" column="birthday" />
+            <id property="phoneNumber" column="phone_number" />
+        </association>
+        <association property="account" javaType="com.swim.entity.Account">
+            <id property="id" column="id" />
+            <id property="balance" column="balance" />
+            <id property="remainPoints" column="remain_points" />
+            <id property="remainTime" column="remain_time" />
+        </association>
+        <association property="member" javaType="com.swim.entity.Member">
+            <id property="id" column="id" />
+            <id property="endTime" column="end_time" />
+            <id property="memberStatus" column="member_status" />
+        </association>
+        <association property="swimHistory" javaType="com.swim.entity.SwimHistory">
+            <id property="id" column="id" />
+            <id property="swimStart" column="swim_start" />
+            <id property="swimEnd" column="swim_end" />
+        </association>
+    </resultMap>
+
+    <resultMap id="selectUserMap" type="com.swim.entity.User">
+        <id property="id" column="id" />
+        <id property="username" column="username" />
+        <id property="password" column="password" />
+        <association property="userInfo" javaType="com.swim.entity.UserInfo">
+            <id property="id" column="id" />
+            <id property="status" column="status" />
+            <id property="authority" column="authority" />
+            <id property="createTime" column="create_time" />
+            <id property="swimStatus" column="swim_status" />
+        </association>
+        <association property="userMessage" javaType="com.swim.entity.UserMessage">
+            <id property="id" column="id" />
+            <id property="name" column="name" />
+            <id property="sex" column="sex" />
+            <id property="birthday" column="birthday" />
+            <id property="phoneNumber" column="phone_number" />
+        </association>
+        <association property="account" javaType="com.swim.entity.Account">
+            <id property="id" column="id" />
+            <id property="balance" column="balance" />
+            <id property="remainPoints" column="remain_points" />
+            <id property="remainTime" column="remain_time" />
+        </association>
+        <association property="member" javaType="com.swim.entity.Member">
+            <id property="id" column="id" />
+            <id property="endTime" column="end_time" />
+            <id property="memberStatus" column="member_status" />
+        </association>
+    </resultMap>
+</mapper>

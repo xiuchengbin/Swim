@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title><link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+    <script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+    <style>
+        .alter{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="cBody" style="width: 500px;left: 10px;">
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">用户id：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${user.id}" type="text" readonly style="border: 0;" name="id"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">用户名：</label>
+            <div class="layui-input-block">
+                <input th:value="${user.username}" readonly  type="text" name="username"  autocomplete="off" class="layui-input a" maxlength="15">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">姓名：</label>
+            <div class="layui-input-block">
+                <input th:value="${user.userMessage.name}" readonly type="text" name="name"  autocomplete="off" class="layui-input a">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane >
+            <label class="layui-form-label">联系电话：</label>
+            <div class="layui-input-block">
+                <input th:value="${user.userMessage.phoneNumber}" readonly type="text" name="phoneNumber"  autocomplete="off" class="layui-input a"  oninput="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">当前余额：</label>
+            <div class="layui-input-block">
+                <input th:value="${user.account.balance}" readonly type="text" name="balance"class="layui-input a" >
+            </div>
+        </div>
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">退款金额：</label>
+            <div class="layui-input-block">
+                <input type="text" name="refundMoney" maxlength="8" class="layui-input a" oninput="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button id="recharge" class="layui-btn" onclick="return false;" lay-submit lay-filter="submitBut" style="position: relative;left: 30px;">确定</button>
+                <button id="large" class="layui-btn layui-btn-warm" onclick="return false;" lay-submit lay-filter="submitBut" style="position: relative;left: 110px;">全部退款</button>
+            </div>
+        </div>
+<!--        <button id="alter"  style="display: none;" class="layui-btn layui-btn-primary ready-alter"></button>-->
+    </form>
+</div>
+</body>
+<script>
+        //     parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+        $("#large").click(function () {
+            $("input[name=refundMoney]").val($("input[name=balance]").val());
+        });
+        $("#recharge").click(function () {
+            if(parseFloat($("input[name=refundMoney]").val())>0){
+            }else {
+                layer.alert('退款金额应大于0', {icon: 5}, function(index){
+                    // parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                    layer.close(index);
+                });
+                return;
+            }
+            $.ajax({
+                type : "post",
+                url : "/user-management/refund.do",
+                data : {"id":$("input[name=id]").val(),
+                    "refundMoney":$("input[name=refundMoney]").val()
+                },
+                async : true,
+                success : function(data) {
+                    if(data==1){
+                        layer.alert('退款成功！', {icon: 1}, function(index){
+                            parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                            layer.close(index);
+                            location.replace(location.href);
+                        });
+                    }else if(data==-1){
+                        layer.alert('退款金额不能大于余额！', {icon: 5}, function(index){
+                            layer.close(index);
+                            location.replace(location.href);
+                        });
+                    }else{
+                        layer.alert('退款失败，请重试！', {icon: 5}, function(index){
+                            layer.close(index);
+                            location.replace(location.href);
+                        });
+                    }
+                },
+                error: function () {
+                    layer.alert('退款失败，请重试！', {icon: 5}, function(index){
+                        layer.close(index);
+                        location.replace(location.href);
+                    });
+                }
+
+            });
+        });
+
+</script>
+</html>

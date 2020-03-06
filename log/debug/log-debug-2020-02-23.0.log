@@ -1,0 +1,500 @@
+2020-02-23 10:32:26.258 [main] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-02-23 10:32:28.700 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-02-23 10:32:28.727 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-02-23 10:32:28.752 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-02-23 10:32:28.783 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-02-23 10:32:29.169 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 10:32:29.191 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 10:32:29.199 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 10:32:32.326 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2020-02-23 10:32:32.331 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-02-23 10:32:32.466 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login", parameters={}
+2020-02-23 10:32:32.469 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toLogin(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:32:32.639 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:32:32.683 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode", parameters={}
+2020-02-23 10:32:32.684 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:32:32.968 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:32:47.448 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode?timeStamp=Sun%20Feb%2023%202020%2010:32:47%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)", parameters={masked}
+2020-02-23 10:32:47.449 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:32:47.465 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:34:58.725 [main] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-02-23 10:35:01.023 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-02-23 10:35:01.063 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-02-23 10:35:01.100 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-02-23 10:35:01.137 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-02-23 10:35:02.022 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 10:35:02.049 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 10:35:02.051 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 10:35:02.065 [main] DEBUG c.s.d.ILoginMapper.selectUserByUsernameAndPassword - ==>  Preparing: select * from user where username=? and password=? 
+2020-02-23 10:35:02.066 [main] DEBUG c.s.d.ILoginMapper.selectUserByUsernameAndPassword - ==> Parameters: 1(String), 1(String)
+2020-02-23 10:35:02.091 [main] DEBUG c.s.d.ILoginMapper.selectUserByUsernameAndPassword - <==      Total: 1
+2020-02-23 10:41:12.218 [main] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-02-23 10:41:14.298 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-02-23 10:41:14.318 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-02-23 10:41:14.343 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-02-23 10:41:14.368 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-02-23 10:41:14.808 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 10:41:14.829 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 10:41:14.838 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 10:41:21.738 [main] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-02-23 10:41:23.778 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-02-23 10:41:23.798 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-02-23 10:41:23.823 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-02-23 10:41:23.851 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-02-23 10:41:24.233 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 10:41:24.252 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 10:41:24.254 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 10:41:50.518 [main] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-02-23 10:41:52.538 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-02-23 10:41:52.568 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-02-23 10:41:52.593 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-02-23 10:41:52.628 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-02-23 10:41:53.070 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 10:41:53.094 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 10:41:53.095 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 10:43:39.841 [main] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-02-23 10:43:42.459 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 88 mappings in 'requestMappingHandlerMapping'
+2020-02-23 10:43:42.499 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/**, /templates/**, /webjars/**] in 'resourceHandlerMapping'
+2020-02-23 10:43:42.549 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-02-23 10:43:42.620 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-02-23 10:43:43.246 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 10:43:43.284 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 10:43:43.286 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 10:43:57.722 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2020-02-23 10:43:57.733 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-02-23 10:43:57.755 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login", parameters={}
+2020-02-23 10:43:57.759 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toLogin(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:43:58.118 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:43:58.140 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode", parameters={}
+2020-02-23 10:43:58.141 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:43:58.443 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:10.392 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
+2020-02-23 10:44:10.393 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
+2020-02-23 10:44:10.410 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-02-23 10:44:10.410 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [1]
+2020-02-23 10:44:10.414 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:10.420 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/user", parameters={masked}
+2020-02-23 10:44:10.420 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#login(User, String, HttpSession, Model)
+2020-02-23 10:44:10.435 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-02-23 10:44:10.436 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-02-23 10:44:10.453 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-02-23 10:44:10.458 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-02-23 10:44:10.458 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:10.460 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-02-23 10:44:10.460 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-02-23 10:44:10.461 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:10.464 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-02-23 10:44:10.467 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-02-23 10:44:10.468 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-02-23 10:44:10.468 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-02-23 10:44:10.469 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-02-23 10:44:10.469 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:10.470 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-02-23 10:44:10.470 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-02-23 10:44:10.471 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:10.471 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-02-23 10:44:10.471 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==>  Preparing: select * from user_message where id=? 
+2020-02-23 10:44:10.472 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:10.474 [http-nio-8080-exec-9] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - <==      Total: 1
+2020-02-23 10:44:10.479 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.view.RedirectView - View name 'redirect:/index/index', model {user=User{id=null, username='1', password='1', userInfo=null, userMessage=null, account=null, member=null, swimHistory=null}, org.springframework.validation.BindingResult.user=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2020-02-23 10:44:10.480 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 302 FOUND
+2020-02-23 10:44:10.486 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index/index", parameters={}
+2020-02-23 10:44:10.486 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toIndex()
+2020-02-23 10:44:10.601 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:10.605 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index-main.html", parameters={}
+2020-02-23 10:44:10.605 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.IndexMainController#toIndexMain(Model, HttpServletRequest, HttpSession)
+2020-02-23 10:44:10.606 [http-nio-8080-exec-1] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==>  Preparing: select version() 
+2020-02-23 10:44:10.606 [http-nio-8080-exec-1] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==> Parameters: 
+2020-02-23 10:44:10.608 [http-nio-8080-exec-1] DEBUG com.swim.dao.IDataMapper.getMySQL_version - <==      Total: 1
+2020-02-23 10:44:10.629 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:10.638 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/lib/layui/css/layui.css", parameters={}
+2020-02-23 10:44:10.641 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-02-23 10:44:10.643 [http-nio-8080-exec-2] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-02-23 10:44:10.643 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-02-23 10:44:10.652 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.woff?v=226_rc2", parameters={masked}
+2020-02-23 10:44:10.653 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-02-23 10:44:10.658 [http-nio-8080-exec-7] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-02-23 10:44:10.658 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-02-23 10:44:10.675 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.ttf?v=226_rc2", parameters={masked}
+2020-02-23 10:44:10.676 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-02-23 10:44:10.677 [http-nio-8080-exec-4] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-02-23 10:44:10.677 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-02-23 10:44:12.636 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/exit", parameters={}
+2020-02-23 10:44:12.637 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#exitLogin(HttpSession)
+2020-02-23 10:44:12.638 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.view.RedirectView - View name 'redirect:/login', model {}
+2020-02-23 10:44:12.638 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 302 FOUND
+2020-02-23 10:44:12.640 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login", parameters={}
+2020-02-23 10:44:12.640 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toLogin(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:44:12.645 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:12.654 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode", parameters={}
+2020-02-23 10:44:12.655 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:44:12.662 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:20.318 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
+2020-02-23 10:44:20.318 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
+2020-02-23 10:44:20.319 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-02-23 10:44:20.319 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [0]
+2020-02-23 10:44:20.320 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:20.326 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode?timeStamp=Sun%20Feb%2023%202020%2010:44:20%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)", parameters={masked}
+2020-02-23 10:44:20.326 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:44:20.333 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:26.833 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
+2020-02-23 10:44:26.833 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
+2020-02-23 10:44:26.834 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-02-23 10:44:26.834 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [0]
+2020-02-23 10:44:26.835 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:26.839 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode?timeStamp=Sun%20Feb%2023%202020%2010:44:26%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)", parameters={masked}
+2020-02-23 10:44:26.840 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:44:26.849 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:30.606 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/login/verifyCode?timeStamp=Sun%20Feb%2023%202020%2010:44:30%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)", parameters={masked}
+2020-02-23 10:44:30.606 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#getVerifyCode(HttpServletRequest, HttpServletResponse)
+2020-02-23 10:44:30.612 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:33.529 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/codeIncorrect", parameters={masked}
+2020-02-23 10:44:33.529 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#codeIncorrect(HttpSession, String)
+2020-02-23 10:44:33.530 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-02-23 10:44:33.530 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [1]
+2020-02-23 10:44:33.531 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:33.536 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/login/user", parameters={masked}
+2020-02-23 10:44:33.537 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.LoginController#login(User, String, HttpSession, Model)
+2020-02-23 10:44:33.539 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-02-23 10:44:33.540 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-02-23 10:44:33.540 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-02-23 10:44:33.541 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-02-23 10:44:33.541 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:33.542 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-02-23 10:44:33.542 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-02-23 10:44:33.542 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:33.543 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-02-23 10:44:33.543 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==>  Preparing: select id from user where username=? 
+2020-02-23 10:44:33.543 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - ==> Parameters: 1(String)
+2020-02-23 10:44:33.544 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.getIdByUsername - <==      Total: 1
+2020-02-23 10:44:33.544 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==>  Preparing: select * from user where id=? 
+2020-02-23 10:44:33.544 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:33.545 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserById - <==      Total: 1
+2020-02-23 10:44:33.545 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==>  Preparing: select * from user_info where id=? 
+2020-02-23 10:44:33.545 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:33.546 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserInfoById - <==      Total: 1
+2020-02-23 10:44:33.546 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==>  Preparing: select * from user_message where id=? 
+2020-02-23 10:44:33.547 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - ==> Parameters: 1(Integer)
+2020-02-23 10:44:33.547 [http-nio-8080-exec-4] DEBUG com.swim.dao.ILoginMapper.selectUserMessageById - <==      Total: 1
+2020-02-23 10:44:33.548 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.view.RedirectView - View name 'redirect:/index/index', model {user=User{id=null, username='1', password='1', userInfo=null, userMessage=null, account=null, member=null, swimHistory=null}, org.springframework.validation.BindingResult.user=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2020-02-23 10:44:33.548 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 302 FOUND
+2020-02-23 10:44:33.550 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index/index", parameters={}
+2020-02-23 10:44:33.550 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toIndex()
+2020-02-23 10:44:33.558 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:33.576 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/index-main.html", parameters={}
+2020-02-23 10:44:33.576 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.IndexMainController#toIndexMain(Model, HttpServletRequest, HttpSession)
+2020-02-23 10:44:33.577 [http-nio-8080-exec-5] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==>  Preparing: select version() 
+2020-02-23 10:44:33.577 [http-nio-8080-exec-5] DEBUG com.swim.dao.IDataMapper.getMySQL_version - ==> Parameters: 
+2020-02-23 10:44:33.578 [http-nio-8080-exec-5] DEBUG com.swim.dao.IDataMapper.getMySQL_version - <==      Total: 1
+2020-02-23 10:44:33.584 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:33.592 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/lib/layui/css/layui.css", parameters={}
+2020-02-23 10:44:33.594 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-02-23 10:44:33.594 [http-nio-8080-exec-6] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-02-23 10:44:33.594 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-02-23 10:44:33.598 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.woff?v=226_rc2", parameters={masked}
+2020-02-23 10:44:33.599 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-02-23 10:44:33.599 [http-nio-8080-exec-8] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-02-23 10:44:33.599 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-02-23 10:44:33.604 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/font/iconfont.ttf?v=226_rc2", parameters={masked}
+2020-02-23 10:44:33.604 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/static/"]
+2020-02-23 10:44:33.605 [http-nio-8080-exec-9] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-02-23 10:44:33.605 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-02-23 10:44:44.570 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/swim-history.html?timesSamp=1582425884564", parameters={masked}
+2020-02-23 10:44:44.571 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toSwimHistory()
+2020-02-23 10:44:44.581 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:44.620 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getSwimHistory?page=1&limit=10", parameters={masked}
+2020-02-23 10:44:44.620 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getSwimHistory(Integer, Integer)
+2020-02-23 10:44:44.630 [http-nio-8080-exec-1] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==>  Preparing: select count(swim_id) from swim_history 
+2020-02-23 10:44:44.630 [http-nio-8080-exec-1] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - ==> Parameters: 
+2020-02-23 10:44:44.634 [http-nio-8080-exec-1] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistoryCount - <==      Total: 1
+2020-02-23 10:44:44.654 [http-nio-8080-exec-1] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==>  Preparing: select * from swim_history LIMIT 0,10 
+2020-02-23 10:44:44.655 [http-nio-8080-exec-1] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - ==> Parameters: 
+2020-02-23 10:44:44.657 [http-nio-8080-exec-1] DEBUG com.swim.dao.IGoodsMapper.getAllSwimHistory - <==      Total: 10
+2020-02-23 10:44:44.660 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-02-23 10:44:44.660 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[SwimHistory{swimId=39, id=8, swimStart=2020-01-27 17:45:30.0, swimEnd=2020-01-27 17:45: (truncated)...]
+2020-02-23 10:44:44.673 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:45.026 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/income-history.html?timesSamp=1582425885021", parameters={masked}
+2020-02-23 10:44:45.026 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#toIncomeHistory()
+2020-02-23 10:44:45.029 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:45.066 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/history-search/getIncomeHistory?page=1&limit=10", parameters={masked}
+2020-02-23 10:44:45.067 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.HistorySearchController#getIncomeHistory(Integer, Integer)
+2020-02-23 10:44:45.074 [http-nio-8080-exec-7] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==>  Preparing: select count(income_id) from income_history 
+2020-02-23 10:44:45.074 [http-nio-8080-exec-7] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - ==> Parameters: 
+2020-02-23 10:44:45.076 [http-nio-8080-exec-7] DEBUG c.swim.dao.IIncomeMapper.getAllCountIncomeHistory - <==      Total: 1
+2020-02-23 10:44:45.076 [http-nio-8080-exec-7] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==>  Preparing: select * from income_history LIMIT 0,10 
+2020-02-23 10:44:45.076 [http-nio-8080-exec-7] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - ==> Parameters: 
+2020-02-23 10:44:45.078 [http-nio-8080-exec-7] DEBUG com.swim.dao.IIncomeMapper.getAllIncomeHistory - <==      Total: 8
+2020-02-23 10:44:45.078 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-02-23 10:44:45.079 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[IncomeHistory(incomeId=1, id=-1, source=散客计时游泳消费, incomeMoney=50.0, time=2020-02-20 14: (truncated)...]
+2020-02-23 10:44:45.080 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:47.072 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/points-goods-list.html?timesSamp=1582425887068", parameters={masked}
+2020-02-23 10:44:47.073 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toPointsGoods()
+2020-02-23 10:44:47.075 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:47.110 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/selectPointsGoods?page=1&limit=10", parameters={masked}
+2020-02-23 10:44:47.111 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PointsController#selectPointsGoods(Integer, Integer)
+2020-02-23 10:44:47.115 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==>  Preparing: select count(points_goods_id) from points_goods 
+2020-02-23 10:44:47.115 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - ==> Parameters: 
+2020-02-23 10:44:47.118 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getGoodsCount - <==      Total: 1
+2020-02-23 10:44:47.120 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==>  Preparing: select * from points_goods limit 0,10 
+2020-02-23 10:44:47.120 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - ==> Parameters: 
+2020-02-23 10:44:47.121 [http-nio-8080-exec-3] DEBUG com.swim.dao.IPointsMapper.getPointsGoodsList - <==      Total: 10
+2020-02-23 10:44:47.122 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-02-23 10:44:47.122 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[PointsGoods{pointsGoodsId=1, pointsGoodsName='一个月会员', pointsGoodsType=1, pointsGoodsVal (truncated)...]
+2020-02-23 10:44:47.123 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:47.430 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/points-management/points-goods-add.html?timesSamp=1582425887424", parameters={masked}
+2020-02-23 10:44:47.430 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toPointsGoodsAdd()
+2020-02-23 10:44:47.433 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:49.611 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-list.html?timesSamp=1582425889605", parameters={masked}
+2020-02-23 10:44:49.611 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsList()
+2020-02-23 10:44:49.618 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:49.647 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goodsList?page=1&limit=10", parameters={masked}
+2020-02-23 10:44:49.647 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.GoodsController#getGoodsList(Integer, Integer)
+2020-02-23 10:44:49.648 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==>  Preparing: select count(goods_id) from goods 
+2020-02-23 10:44:49.648 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - ==> Parameters: 
+2020-02-23 10:44:49.651 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getGoodsCount - <==      Total: 1
+2020-02-23 10:44:49.651 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==>  Preparing: select * from goods LIMIT 0,? 
+2020-02-23 10:44:49.652 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - ==> Parameters: 10(Integer)
+2020-02-23 10:44:49.653 [http-nio-8080-exec-8] DEBUG com.swim.dao.IGoodsMapper.getGoodsList - <==      Total: 8
+2020-02-23 10:44:49.653 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2020-02-23 10:44:49.654 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{msg=, data=[Goods{goodsId=1, goodsName='游泳计时费用', goodsMessage='单位：元/小时', goodsPrice=7.0, goodsType= (truncated)...]
+2020-02-23 10:44:49.655 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:44:49.980 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/goods-management/goods-add.html?timesSamp=1582425889975", parameters={masked}
+2020-02-23 10:44:49.981 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.swim.controller.PageController#toGoodsAdd()
+2020-02-23 10:44:49.985 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-02-23 10:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 10:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 10:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 11:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 11:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 11:01:14.603 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 11:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 11:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 11:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 11:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 11:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 11:21:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 11:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 11:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 11:31:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 11:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 11:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 11:41:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 11:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 11:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 11:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 12:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 12:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 12:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 12:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 12:11:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 12:11:14.603 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 12:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 12:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 12:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 12:31:14.597 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 12:31:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 12:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 12:41:14.597 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 12:41:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 12:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 12:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 12:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 12:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 13:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 13:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 13:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 13:11:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 13:11:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 13:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 13:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 13:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 13:21:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 13:31:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 13:31:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 13:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 13:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 13:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 13:41:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 13:51:14.597 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 13:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 13:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 14:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 14:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 14:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 14:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 14:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 14:11:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 14:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 14:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 14:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 14:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 14:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 14:31:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 14:41:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 14:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 14:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 14:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 14:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 14:51:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 15:01:14.597 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 15:01:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 15:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 15:11:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 15:11:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 15:11:14.604 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 15:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 15:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 15:21:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 15:31:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 15:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 15:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 15:41:14.597 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 15:41:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 15:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 15:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 15:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 15:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 16:01:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 16:01:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 16:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 16:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 16:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 16:11:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 16:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 16:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 16:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 16:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 16:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 16:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 16:41:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 16:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 16:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 16:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 16:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 16:51:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 17:01:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 17:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 17:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 17:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 17:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 17:11:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 17:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 17:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 17:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 17:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 17:31:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 17:31:14.603 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 17:41:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 17:41:14.607 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 17:41:14.609 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 17:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 17:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 17:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 18:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 18:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 18:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 18:11:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 18:11:14.603 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 18:11:14.605 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 18:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 18:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 18:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 18:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 18:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 18:31:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 18:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 18:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 18:41:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 18:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 18:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 18:51:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 19:01:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 19:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 19:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 19:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 19:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 19:11:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 19:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 19:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 19:21:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 19:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 19:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 19:31:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 19:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 19:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 19:41:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 19:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 19:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 19:51:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 20:01:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 20:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 20:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 20:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 20:11:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 20:11:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 20:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 20:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 20:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 20:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 20:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 20:31:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 20:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 20:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 20:41:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 20:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 20:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 20:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 21:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 21:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 21:01:14.602 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 21:11:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 21:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 21:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 21:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 21:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 21:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 21:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 21:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 21:31:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 21:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 21:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 21:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 21:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 21:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 21:51:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 22:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 22:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 22:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 22:11:14.597 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 22:11:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 22:11:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 22:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 22:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 22:21:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 22:31:14.597 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 22:31:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 22:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 22:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 22:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 22:41:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 22:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 22:51:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 22:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 23:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 23:01:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 23:01:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 23:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 23:11:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 23:11:14.601 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 23:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 23:21:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 23:21:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 23:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 23:31:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 23:31:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 23:41:14.598 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 23:41:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 23:41:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0
+2020-02-23 23:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==>  Preparing: update member set member_status =0 where id IN( select a.id from ( (select id from member where (DATEDIFF(curdate(),end_time)>0 or end_time is null) and member_status=1) )a ) 
+2020-02-23 23:51:14.599 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - ==> Parameters: 
+2020-02-23 23:51:14.600 [scheduling-1] DEBUG com.swim.dao.IMemberMapper.verifyMemberStatus - <==    Updates: 0

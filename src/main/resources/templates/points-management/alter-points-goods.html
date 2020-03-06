@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title><link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+    <script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+    <style>
+        .alter{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="cBody" style="width: 500px;left: 10px;">
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">奖品id：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${pointsGoods.pointsGoodsId}"  type="text"  disabled="disabled" style="border: 0;" name="pointsGoodsId"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">奖品名：</label>
+            <div class="layui-input-block">
+                <input th:value="${pointsGoods.pointsGoodsName}" readonly onclick="aa('pointsGoodsName')" id="pointsGoodsName" type="text" name="pointsGoodsName"  autocomplete="off" class="layui-input a" maxlength="15">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">奖品类型：</label>
+            <div class="layui-input-inline shortInput">
+                <input th:value="${pointsGoodsType}" id="" type="text" disabled style="border: 0;" name="pointsGoodsType"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane >
+            <label class="layui-form-label">奖品值：</label>
+            <div class="layui-input-block">
+                <input th:value="${pointsGoods.pointsGoodsValue}" maxlength="6" readonly onclick="aa('pointsGoodsValue')" id="pointsGoodsValue" type="text" name="pointsGoodsValue"  autocomplete="off" class="layui-input a"  oninput="this.value=this.value.toString().match(/^\d+(?:\.\d)?/)">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane >
+            <label class="layui-form-label">奖品权重：</label>
+            <div class="layui-input-block">
+                <input th:value="${pointsGoods.pointsGoodsWeight}" maxlength="8" readonly onclick="aa('pointsGoodsWeight')" id="pointsGoodsWeight" type="text" name="pointsGoodsWeight"  autocomplete="off" class="layui-input a"  oninput="this.value=this.value.toString().match(/^\d+(?:\.\d)?/)">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane >
+            <label class="layui-form-label">奖品概率：</label>
+            <div class="layui-input-block">
+                <input th:value="${probability}"  readonly  type="text"  autocomplete="off" class="layui-input a">
+            </div>
+        </div>
+
+
+        <button id="alter"  style="display: none;" class="layui-btn layui-btn-primary ready-alter"></button>
+    </form>
+</div>
+</body>
+<script>
+        //     parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+        function aa(param){
+            $(".a").attr("readonly","readonly");
+            $(".a").removeClass("alter");
+            $("#"+param).removeAttr("readonly");
+            $("#"+param).addClass("alter");
+            // $("#"+param).mouseout(function () {
+            //     $("#"+param).attr("readonly","readonly");
+            //     $("#"+param).removeClass("alter");
+            // });
+            $("#"+param).unbind('keydown').keydown(function(e) {
+                if (e.keyCode == 13) {
+                    $("#"+param).attr("readonly","readonly");
+                    $("#"+param).removeClass("alter");
+                    $.ajax({
+                        type : "post",
+                        url : "/points-management/alterPointsGoods",
+                        data : {"pointsGoodsId":$("input[name=pointsGoodsId]").val(),
+                            "pointsGoodsName":$("input[name=pointsGoodsName]").val(),
+                            "pointsGoodsValue":$("input[name=pointsGoodsValue]").val(),
+                            "pointsGoodsWeight":$("input[name=pointsGoodsWeight]").val()},
+                        async : true,
+                        success : function(data) {
+                            if(data==1){
+                                layer.alert('修改成功！', {icon: 1}, function(index){
+                                    parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                                    layer.close(index);
+                                    location.replace(location.href);
+                                });
+                            }else{
+                                layer.alert('修改失败，请重试！', {icon: 5}, function(index){
+                                    layer.close(index);
+                                    location.replace(location.href);
+                                });
+                            }
+                        },
+                        error: function () {
+                            layer.alert('修改失败，请重试！', {icon: 5}, function(index){
+                                layer.close(index);
+                                location.replace(location.href);
+                            });
+                        }
+
+                    });
+
+                }
+            });
+        }
+
+        document.onkeydown = function(event) {
+            var target, code, tag;
+            if (!event) {
+                event = window.event; //针对ie浏览器
+                target = event.srcElement;
+                code = event.keyCode;
+                if (code == 13) {
+                    tag = target.tagName;
+                    if (tag == "TEXTAREA") { return true; }
+                    else { return false; }
+                }
+            }
+            else {
+                target = event.target; //针对遵循w3c标准的浏览器，如Firefox
+                code = event.keyCode;
+                if (code == 13) {
+                    tag = target.tagName;
+                    if (tag == "INPUT") { return false; }
+                    else { return true; }
+                }
+            }
+        };
+</script>
+</html>

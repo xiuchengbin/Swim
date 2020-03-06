@@ -1,0 +1,12 @@
+2020-02-14 22:40:15.878 [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-14 22:40:16.022 [restartedMain] WARN  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [org.apache.shiro.subject.support.DefaultSubjectContext_PRINCIPALS_SESSION_KEY] for session [4921793D4D726DD0EDFA6B9DFF45D2C2]
+2020-02-14 22:40:43.330 [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-14 22:40:59.286 [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-14 22:42:30.012 [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-14 22:43:32.291 [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-14 22:46:07.610 [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-14 22:46:07.690 [restartedMain] WARN  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [org.apache.shiro.subject.support.DefaultSubjectContext_PRINCIPALS_SESSION_KEY] for session [4921793D4D726DD0EDFA6B9DFF45D2C2]
+2020-02-14 22:46:07.756 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [com/swim/configruation/InterceptorConfig.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userGoodsController' method 
+com.swim.controller.UserGoodsController#toSwimHistory()
+to {GET /user/swim-history.html}: There is already 'userGoodsController' bean method
+com.swim.controller.UserGoodsController#toPointsHistory() mapped.

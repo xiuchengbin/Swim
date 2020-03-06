@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title><link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+    <script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+
+</head>
+<body>
+<div class="cBody">
+    <form class="layui-form layui-form-pane"  >
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">用户id：</label>
+            <div class="layui-input-inline shortInput">
+                <input id="id" type="text" disabled="disabled" style="border: 0;" name="id"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">用户名：</label>
+            <div class="layui-input-inline shortInput">
+                <input disabled="disabled" type="text" name="username" style="border: 0;"  autocomplete="off" class="layui-input a" maxlength="5">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">密码：</label>
+            <div class="layui-input-inline shortInput">
+                <input disabled="disabled" type="text" name="password" style="border: 0;"autocomplete="off" class="layui-input a" maxlength="5">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">姓名：</label>
+            <div class="layui-input-inline shortInput">
+                <input disabled="disabled" type="text" name="name" style="border: 0;"autocomplete="off" class="layui-input a" maxlength="5">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">账户状态：</label>
+            <div class="layui-input-block">
+                <input type="checkbox"  name="status" lay-skin="switch" lay-filter="switchTest" lay-text="正常|冻结" title="开关">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label">权限：</label>
+            <div class="layui-input-block">
+                <input type="radio" id="a1" name="authority" value="1" title="普通用户">
+                <input type="radio" id="a2" name="authority" value="2" title="管理员">
+            </div>
+        </div>
+        <button id="alter"  style="display: none;" class="layui-btn layui-btn-primary ready-alter"></button>
+    </form>
+</body>
+<script>
+    window.onload=function (ev) {    //给父页面传值
+        //     parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+        function getQueryString(name) {//解决url中文乱码
+            var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+            var r = window.location.search.substr( 1 ).match( reg );
+            if( r != null ) return decodeURI( r[2] ); return null;
+        }
+        $("input[name=id]").val(getQueryString("id"));
+        $("input[name=username]").val(getQueryString("username"));
+        $("input[name=password]").val(getQueryString("password"));
+        $("input[name=name]").val(getQueryString("name"));
+        if(getQueryString("status")=="true"){//正常
+            $("input[name=status]").attr("checked","checked");
+            layui.form.render();
+        }else{//冻结
+            $("input[name=status]").removeAttr("checked");
+            layui.form.render();
+        }
+
+        if(getQueryString("authority")==1){//普通用户
+            $('input:radio[name=authority]')[0].checked = true;
+            layui.form.render();
+        }else if(getQueryString("authority")==2){//管理员
+            $('input:radio[name=authority]')[1].checked = true;
+            layui.form.render();
+        }
+
+        getQueryString("id");
+    }
+</script>
+    <script>
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+
+        //监听指定开关
+        form.on('switch(switchTest)', function(data){
+            if(this.checked){//true为正常，false为冻结
+                $.ajax({
+                    type : "post",
+                    url : "/user-management/alterStatus",
+                    data : {
+                        id: $("input[name=id]").val(),
+                        status: true
+                    },
+                    async : true, // 同步调用
+                    success : function(data) {
+                        if(data==1){
+                            layer.alert('修改成功！', {icon: 1});
+                            parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                        }else {
+                            layer.alert('修改失败！', {icon: 5}, function(index){
+                                layer.close(index);
+                                location.replace(location.href);
+                            });
+                        }
+                    },
+                    error: function () {
+                        layer.alert('修改失败！', {icon: 5}, function(index){
+                            layer.close(index);
+                            location.replace(location.href);
+                        });
+                    }
+                });
+            }else {
+                $.ajax({
+                    type : "post",
+                    url : "/user-management/alterStatus",
+                    data : {
+                        id: $("input[name=id]").val(),
+                        status: false
+                    },
+                    async : true, // 同步调用
+                    success : function(data) {
+                        if(data==1){
+                            layer.alert('修改成功！', {icon: 1});
+                            parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                        }else {
+                            layer.alert('修改失败！', {icon: 5}, function(index){
+                                layer.close(index);
+                                location.replace(location.href);
+                            });
+                        }
+                    },
+                    error: function () {
+                        layer.alert('修改失败！', {icon: 5}, function(index){
+                            layer.close(index);
+                            location.replace(location.href);
+                        });
+                    }
+                });
+            }
+            // layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
+            //     offset: '6px'
+            // });
+            // layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+        });
+
+        form.on('radio', function(data){
+            //console.log(data.elem); //得到radio原始DOM对象
+            //console.log(data.value); //被点击的radio的value值
+            if(data.value==1){//普通用户
+                $.ajax({
+                    type : "post",
+                    url : "/user-management/alterAuthority",
+                    data : {
+                        id: $("input[name=id]").val(),
+                        authority: 1
+                    },
+                    async : true, // 同步调用
+                    success : function(data) {
+                        if(data==1){
+                            layer.alert('修改成功！', {icon: 1});
+                            parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                        }else {
+                            layer.alert('修改失败！', {icon: 5}, function(index){
+                                layer.close(index);
+                                location.replace(location.href);
+                            });
+                        }
+                    },
+                });
+            }else if (data.value==2) {//管理员
+                $.ajax({
+                    type : "post",
+                    url : "/user-management/alterAuthority",
+                    data : {
+                        id: $("input[name=id]").val(),
+                        authority: 2
+                    },
+                    async : true, // 同步调用
+                    success : function(data) {
+                        if(data==1){
+                            layer.alert('修改成功！', {icon: 1});
+                            parent.document.getElementsByClassName("layui-laypage-skip")[0].getElementsByTagName("button")[0].click();//刷新父页面数据
+                        }else {
+                            layer.alert('修改失败！', {icon: 5}, function(index){
+                                layer.close(index);
+                                location.replace(location.href);
+                            });
+                        }
+                    },
+                });
+            }
+        });
+
+
+    });
+</script>
+</html>

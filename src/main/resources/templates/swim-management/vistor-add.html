@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="<%=basePath%>">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+    <meta name="renderer" content="webkit">
+    <!--国产浏览器高速模式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="穷在闹市" />
+    <!-- 作者 -->
+    <meta name="revised" content="穷在闹市.v3, 2019/05/01" />
+    <!-- 定义页面的最新版本 -->
+    <meta name="description" content="网站简介" />
+    <!-- 网站简介 -->
+    <meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+    <title>添加散客</title>
+
+    <!-- 公共样式 开始 -->
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+    <script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+    <!-- 公共样式 结束 -->
+
+    <style>
+        .layui-form{
+            margin-right: 30%;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="cBody">
+    <form class="layui-form"  id="user">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名：</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" name="name" maxlength="5"  autocomplete="off" class="layui-input" >
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系电话：</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" name="phoneNumber" maxlength="11"   autocomplete="off" class="layui-input" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">应付金额：</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" name="balance" style="border: none;" disabled   autocomplete="off" class="layui-input" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">计费方式：</label>
+            <div class="layui-input-block">
+                <input type="radio" id="a1" name="type" value="1" title="次数计费" checked>
+                <input type="radio" id="a2" name="type" value="2" title="时间计费">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button id="add" class="layui-btn" lay-submit lay-filter="submitBut">确定</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+    window.onload=function () {
+        layui.use('form', function() {
+            var form = layui.form;
+            //监听提交
+            form.on('submit(submitBut)', function(data) {
+                // layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+
+        layui.use(['form', 'layedit', 'laydate'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate;
+
+            form.on('radio', function(data){
+                //console.log(data.elem); //得到radio原始DOM对象
+                //console.log(data.value); //被点击的radio的value值
+                if(data.value==1){//次数计费
+                    $.ajax({
+                        type : "post",
+                        url : "/swim-management/selectPrice",
+                        data : {
+                            type: 1
+                        },
+                        async : true, // 同步调用
+                        success : function(data) {
+                            $("input[name=balance]").val(data);
+                            add(1);
+                        },
+                    });
+                }else if (data.value==2) {//时间计费
+                    $.ajax({
+                        type : "post",
+                        url : "/swim-management/selectPrice",
+                        data : {
+                            type: 2
+                        },
+                        async : true, // 同步调用
+                        success : function(data) {
+                            $("input[name=balance]").val(data);
+                            add(2);
+                        },
+                    });
+                }
+            });
+
+
+        });
+
+        $.ajax({
+            type : "post",
+            url : "/swim-management/selectPrice",
+            data : {
+                type: 1
+            },
+            async : true, // 同步调用
+            success : function(data) {
+                $("input[name=balance]").val(data);
+                add(1);
+            },
+        });
+    }
+
+
+    function add(i){
+        $("#add").unbind().click(function () {
+            if($("input[name=name]").val().length<1){
+                layer.msg('姓名不能为空！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }else if($("input[name=phoneNumber]").val().length<1){
+                layer.msg('联系电话不能为空！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }else if($("input[name=balance]").val()==null||$("input[name=balance]").val()==""){
+                layer.msg('初始金额不能为空！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }
+            $.ajax({
+                type : "post",
+                url : "/swim-management/addVistor",
+                data : {
+                    "name": $("input[name=name]").val(),
+                    "phoneNumber": $("input[name=phoneNumber]").val(),
+                    "balance": $("input[name=balance]").val(),
+                    "type": i,//1为次数计费，2为时间计费
+                },
+                async : true,
+                success : function(data) {
+                    if(i==1){
+                        if(data==0){
+                            layer.alert('添加失败，请重试！', {icon: 5}, function(index){
+                                layer.close(index);
+                            });
+                        }else {
+                            layer.alert('计数结算成功！', {icon: 1}, function(index){
+                                layer.close(index);
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }
+                    }else {
+                        if(data==0){
+                            layer.alert('添加失败，请重试！', {icon: 5}, function(index){
+                                layer.close(index);
+                            });
+                        }else{
+                            layer.alert('添加成功！vitorId：'+data, {icon: 1}, function(index){
+                                parent.document.getElementById("select").click();//刷新父页面数据
+                                layer.close(index);
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }
+                }
+
+                }
+
+            });
+        });
+    }
+</script>
+</body>
+</html>

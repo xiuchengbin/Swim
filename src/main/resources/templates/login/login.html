@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>游泳馆登陆页</title>
+<!-- 公共样式 开始 -->
+	<link rel="stylesheet"
+		  href="../css/bootstrap.min.css">
+	<script type="text/javascript"
+			src="../js/jquery-1.11.0.js"></script>
+	<script type="text/javascript"
+			src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/Mylogin.js"></script>
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script src="/framework/cframe.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link rel="bookmark" href="/images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/css/base.css">
+<link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+<!-- 仅供所有子页面使用 -->
+<!-- 公共样式 结束 -->
+<link rel="stylesheet" type="text/css" href="/css/login.css">
+<script type="text/javascript" src="/js/login.js"></script>
+
+<script type="text/javascript">
+	if (window != top)
+		top.location.href = location.href;
+</script>
+</head>
+
+<body>
+
+	<!--主体 开始-->
+	<div class="login_main">
+		<!--轮播图 开始-->
+		<div class="layui-carousel lbt" id="loginLbt">
+			<div carousel-item>
+				<div class="item"
+					style="background: url(/images/login_bg1.jpg) no-repeat; background-size: cover;"></div>
+				<div class="item"
+					style="background: url(/images/login_bg2.jpg) no-repeat; background-size: cover;"></div>
+			</div>
+		</div>
+		<!--轮播图 结	-->
+		<div class="logo">
+			<!-- 				<img src="images/login_logo.png" /> -->
+			<div>
+				<h1>游泳馆管理系统</h1>
+			</div>
+		</div>
+		<div class="form_tzgg" style="height: 500px;">
+			<!--登陆框主体-->
+			<div class="form" onsubmit="return validateForm();">
+				<form action="login/user" method="post" class="layui-form">
+					<div class="title" style="text-align: center">用户登录</div>
+					<span style="color: red;" id="msg"></span>
+					<br>
+					<div class="con" onclick="getFocus(this)">
+						<input type="text" name="username" required
+							oninvalid="setCustomValidity('用户名不能为空')"
+							oninput="value=value.replace(/[^\w\.\/]/ig,''),setCustomValidity('')"
+							placeholder="请输入您的用户名" class="layui-input">
+					</div>
+					<div class="con" onclick="getFocus(this)">
+						<input type="password" name="password" required
+							oninvalid="setCustomValidity('密码不能为空')"
+							oninput="setCustomValidity('')" placeholder="请输入您的账户密码"
+							class="layui-input">
+					</div>
+					<div class="con" onclick="getFocus(this)" style="width: 200px;display: inline-block">
+						<input type="text" name="verifyCode" style="width: 200px;"
+							   oninvalid="setCustomValidity('验证码不能为空')"
+							    placeholder="请输入验证码"
+							   class="layui-input">
+					</div>
+					<img id="img"  onclick="changeImg();" src="/login/verifyCode"  style="position: relative;left:10px;top: -40px;"/>
+					<br>
+					<div class="but">
+						<button class="layui-btn" type="submit">登录</button>
+					</div>
+					<div class="apply">
+						<!-- <a class="zhuce" href="javascript:void(0)">我要注册</a> -->
+					</div>
+				</form>
+			</div>
+
+
+<!--			<div class="tzgg">-->
+<!--				<div class="title">通知公告</div>-->
+<!--				<div class="con">-->
+<!--					<ul>-->
+<!--						<li><span>11-29</span><a href="javascript:void(0)"-->
+<!--							target="_blank">游泳馆管理系统开始启用</a></li>-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--			</div>-->
+		</div>
+		<!--  -->
+
+
+	</div>
+	<!--主体 结束-->
+</body>
+<script>
+	function changeImg(){
+		var img = document.getElementById("img");
+		img.src = "/login/verifyCode?timeStamp="+ new Date();
+	}
+
+	function validateForm() {
+		var temp=false;
+		if($("input[name=verifyCode]").val()==""||$("input[name=verifyCode]").val()==null){
+			layer.alert('验证码不能为空！', {icon: 5}, function(index){
+				changeImg();
+				layer.close(index);
+			});
+			return false;
+		}
+		$.ajax({
+			type : "post",
+			url : "/login/codeIncorrect",
+			async: false,
+			data : {
+				verifyCode: $("input[name=verifyCode]").val(),
+			},
+			success : function(data) {
+				if(data==1){
+					temp=true;
+				}else {
+					layer.alert('验证码错误！', {icon: 5}, function(index){
+						layer.close(index);
+					});
+				}
+			},
+			error: function () {
+				layer.alert('验证码错误！', {icon: 5}, function(index){
+					layer.close(index);
+				});
+			}
+		});
+		if(temp==true){
+			return true;
+		}
+		$("input[name=verifyCode]").val("");
+		changeImg();
+		return false;
+	}
+
+	//paraName 为被查找的参数名称
+	function GetUrlParam(paraName) {
+		var url = document.location.toString();
+		var arrObj = url.split("?");
+		if (arrObj.length > 1) {
+			var arrPara = arrObj[1].split("&");
+			var arr;
+			for (var i = 0; i < arrPara.length; i++) {
+				arr = arrPara[i].split("=");
+				if (arr != null && arr[0] == paraName) {
+					return arr[1];
+				}
+			}
+			return "";
+		}
+		else {
+			return "";
+		}
+	}
+	if(GetUrlParam("msg")==-1){
+		$("#msg").html("用户名或密码有误");
+	}
+	if(GetUrlParam("msg")==-2){
+		$("#msg").html("账号已被冻结");
+	}
+
+</script>
+</html>

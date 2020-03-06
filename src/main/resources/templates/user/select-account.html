@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="穷在闹市" />
+		<!-- 作者 -->
+		<meta name="revised" content="穷在闹市.v3, 2019/05/01" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>我的账户</title>
+		<link rel="stylesheet"
+			  href="../css/bootstrap.min.css">
+		<link rel="stylesheet"
+			  href="../css/tooltip.css">
+		<script type="text/javascript"
+				src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript"
+				src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript"
+				src="../js/tooltip.min.js"></script>
+		<!-- 公共样式 开始 -->
+		<link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../fonts/myCloud.css">
+		<script type="text/javascript" src="../framework/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script src="../framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
+
+	</head>
+
+	<body>
+	<div class="cBody">
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width: 110px;">余额：</label>
+				<div class="layui-input-inline shortInput">
+						<input type="text" disabled="disabled" style="border: 0;" name="balance" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width: 110px;">积分：</label>
+				<div class="layui-input-inline shortInput">
+					<input type="text" disabled="disabled" style="border: 0;" name="remainPoints" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width: 110px;">游泳次数：</label>
+				<div class="layui-input-inline shortInput">
+					<input type="text" disabled="disabled" style="border: 0;" name="remainTime" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width: 110px;">会员状态：</label>
+				<div class="layui-input-inline shortInput">
+					<input type="text" disabled="disabled" style="border: 0;" name="memberStatus" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width: 110px;">过期时间：</label>
+				<div class="layui-input-inline shortInput">
+					<input type="text" disabled="disabled" style="border: 0;" name="endTime" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+			<button id="chou" style="position: absolute;top: 70px;left: 190px;" type="button" class="layui-btn layui-btn-sm ">抽奖(5积分)</button>
+			<button id="chou2" style="position: absolute;top: 70px;left: 300px;" type="button" class="layui-btn layui-btn-sm layui-btn-normal">抽奖十次(50积分)</button>
+
+		<!--		<div class="test_triangle_border" style="height: 10px;width: 10px; position:absolute; left: 200px;top: 75px;" >-->
+<!--			<svg id="memberNotice" style="height: 22px;width: 22px" t="1578733400777" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1117" width="200" height="200"><path d="M511.51393 63.894216c-114.5315 0-229.061976 43.508933-316.720432 131.167389-174.676321 174.676321-174.676321 458.764542 0 633.440863 87.658456 87.658456 202.188932 131.167389 316.720432 131.167389s229.062999-43.508933 316.720432-131.167389c174.676321-174.676321 174.676321-458.764542 0-633.440863C740.576929 107.403149 626.045429 63.894216 511.51393 63.894216zM511.51393 108.683305c52.466955 0 103.653755 10.237155 151.641699 29.432333 49.907667 20.475334 94.695732 49.907667 133.086088 88.937588 39.029922 38.390355 68.463278 83.179444 88.937588 133.086088 19.195178 47.987944 29.432333 99.174744 29.432333 151.641699s-10.237155 103.653755-29.432333 151.641699c-20.47431 49.907667-49.907667 94.695732-88.937588 133.086088-38.390355 39.029922-83.179444 68.463278-133.086088 88.937588-47.987944 19.195178-99.174744 29.432333-151.641699 29.432333-52.466955 0-103.653755-10.237155-151.641699-29.432333-49.907667-20.475334-94.695732-49.907667-133.086088-88.937588-39.029922-38.390355-68.463278-83.179444-88.937588-133.086088-19.195178-47.987944-29.432333-99.174744-29.432333-151.641699s10.237155-103.653755 29.432333-151.641699c20.475334-49.907667 49.907667-94.695732 88.937588-133.086088 38.390355-39.029922 83.179444-68.463278 133.086088-88.937588C407.860175 118.92046 459.046974 108.683305 511.51393 108.683305z" p-id="1118"></path><path d="M511.51393 674.300456c-18.555611 0-34.55091 15.355733-34.55091 34.55091 0 18.555611 15.996322 33.911344 34.55091 33.911344 19.195178 0 34.55091-15.355733 34.55091-33.911344C546.065863 689.657212 530.709107 674.300456 511.51393 674.300456zM512.154519 280.799314c-42.2298 0-76.141144 10.877745-101.734032 33.911344-25.593911 22.394033-41.589211 55.026244-46.707788 97.895611l58.225099 7.0383c4.479011-31.991622 15.355733-55.665811 31.352055-70.381977 15.996322-15.355733 35.831067-22.394033 59.505255-22.394033 24.953322 0 46.068222 8.317433 63.343677 24.953322 16.635889 15.996322 24.953322 35.1915 24.953322 57.585533 0 11.517311-2.559289 23.034623-8.317433 33.271778-5.758144 10.237155-18.555611 23.674189-37.750789 40.949644-19.834744 17.275455-33.271778 30.072923-40.949644 39.029922-9.597589 12.156878-17.275455 24.313755-21.754466 36.470633-6.398734 15.996322-9.597589 35.1915-9.597589 56.945967l0.639566 17.275455 53.746088 0c0.639566-22.394033 1.919722-39.029922 4.479011-48.627511 3.198855-10.237155 7.0383-19.195178 12.796444-26.873044 5.758144-7.677866 17.275455-19.834744 35.831067-35.831067 26.873044-24.313755 45.428655-44.789089 55.026244-61.424978 8.958022-16.635889 14.0766-35.1915 14.0766-55.026244 0-34.55091-13.437034-63.984267-40.310078-88.298022C592.773651 292.956192 556.942585 280.799314 512.154519 280.799314z" p-id="1119"></path>-->
+<!--				<div style="position: relative;top: -20px;" class="popup">-->
+<!--				</div>-->
+<!--			</svg>-->
+<!--		</div>-->
+<!--		<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">点我弹出/隐藏弹出框</button>-->
+	</div>
+	</body>
+	<script>
+		window.onload=function () {
+			$.ajax({
+				type : "post",
+				url : "/user/selectAccount",
+				async : true, // 同步调用
+				success : function(data) {
+					if(data.member.memberStatus==true){
+						$("input[name=memberStatus]").val("是");
+						$("input[name=endTime]").val(dateFormat(data.member.endTime));
+					}else {
+						$("input[name=memberStatus]").val("否");
+						$("input[name=endTime]").val("您还不是会员");
+					}
+					$("input[name=balance]").val(data.account.balance);
+					$("input[name=remainPoints]").val(data.account.remainPoints);
+					$("input[name=remainTime]").val(data.account.remainTime);
+				},
+			});
+
+			function dateFormat(longTime) {
+				if(longTime==null){
+					return "不是会员";
+				}
+				var date = new Date(longTime);
+				var day = ("0" + date.getDate()).slice(-2);
+				var month = ("0" + (date.getMonth() + 1)).slice(-2);
+				var today = date.getFullYear() + "-" + (month) + "-" + (day);
+				return today;
+			}
+
+			$("#chou").click(function () {
+				$.ajax({
+					type : "post",
+					url : "/user/lottery",
+					async : true, // 同步调用
+					success : function(data) {
+						if(data==-1){
+							layer.alert('积分不足！', {icon: 5}, function(index){
+								layer.close(index);
+							});
+							return;
+						}
+						var msg;
+						for(var i=0;i<data.length;i++){
+							if(i==0){
+								msg=data[i].pointsGoodsName;
+							}else {
+								msg=msg+","+data[i].pointsGoodsName;
+							}
+						}
+						layer.alert(msg,function(index){
+							layer.close(index);
+							location.replace(location.href);
+						});
+					},
+				});
+			});
+
+			$("#chou2").click(function () {
+				$.ajax({
+					type : "post",
+					url : "/user/lottery10",
+					async : true, // 同步调用
+					success : function(data) {
+						if(data==-1){
+							layer.alert('积分不足！', {icon: 5}, function(index){
+								layer.close(index);
+							});
+							return;
+						}
+						var msg;
+						for(var i=0;i<data.length;i++){
+							if(i==0){
+								msg=data[i].pointsGoodsName;
+							}else {
+								msg=msg+","+data[i].pointsGoodsName;
+							}
+						}
+						layer.alert(msg,function(index){
+							layer.close(index);
+							location.replace(location.href);
+						});
+					},
+				});
+			});
+
+
+		}
+		// $(".test_triangle_border").on({
+		// 	mouseover: function() {
+		// 		$(".popup").show();
+		// 	},
+		// 	mouseout: function() {
+		// 		$(".popup").hide();
+		// 	}
+		// });
+	</script>
+
+</html>

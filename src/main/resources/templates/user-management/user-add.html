@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+    <meta name="renderer" content="webkit">
+    <!-- 定义页面的最新版本 -->
+    <meta name="description" content="网站简介" />
+    <!-- 网站简介 -->
+    <meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+    <title>添加用户</title>
+    <!-- 公共样式 开始 -->
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+    <script type="text/javascript" src="/framework/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script src="/framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+    <!-- 公共样式 结束 -->
+
+    <style>
+        .layui-form{
+            margin-right: 30%;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="cBody">
+    <form id="user">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" name="username" maxlength="15" required autocomplete="off" class="layui-input"
+                       oninput="value=value.replace(/[^\w\.\/]/ig,''),setCustomValidity('')">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码(12345)</label>
+            <div class="layui-input-inline shortInput">
+                <input type="password" name="password" maxlength="15" required autocomplete="off" class="layui-input"  value="12345">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" name="name" maxlength="20" required  autocomplete="off" class="layui-input" >
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-inline shortInput" style="position: relative;top:8px; left: 5px;">
+                <input type="radio" id="man"  name="sex" value="男" checked  class="a">男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="woman" name="sex" value="女"  class="a" style="position: relative; left:30px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">出生日期</label>
+            <div class="layui-input-inline shortInput">
+                <input type="date" name="birthday" required  autocomplete="off" class="layui-input a" >
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系电话</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" name="phoneNumber" required maxlength="11"   autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">初始金额</label>
+            <div class="layui-input-inline shortInput">
+                <input type="text" name="balance" maxlength="5" required  autocomplete="off" class="layui-input" value="100" oninput="this.value=this.value.replace(/\D/g,'')">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button id="add" class="layui-btn" lay-submit lay-filter="submitBut">确定</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+    window.onload=function () {
+        $("#add").click(function () {
+            if($("input[name=username]").val()==""){
+                layer.msg('用户名不能为空！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }
+            if($("input[name=password]").val().length<5){
+                layer.msg('密码长度不足5位！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }
+            if($("input[name=name]").val()==""){
+                layer.msg('姓名不能为空！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }
+            if($("input[name=birthday]").val()==""){
+                layer.msg('生日不能为空！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }
+            if($("input[name=phoneNumber]").val()==""){
+                layer.msg('联系电话不能为空！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }
+            if(parseInt($("input[name=balance]").val())<100){
+                layer.msg('初始金额不能低于100元！', {
+                    icon: 5,
+                    time: 1000
+                });
+                return;
+            }
+            $.ajax({
+                type : "post",
+                url : "/user-management/addUser",
+                data : {
+                    "username": $("input[name=username]").val(),
+                    "password": $("input[name=password]").val(),
+                    "name": $("input[name=name]").val(),
+                    "sex":$("input[name=sex]:checked").val(),
+                    "birthday": $("input[name=birthday]").val(),
+                    "phoneNumber": $("input[name=phoneNumber]").val(),
+                    "balance": $("input[name=balance]").val(),
+                },
+                async : true,
+                success : function(data) {
+                    if(data==-1){
+                        layer.alert('用户名已经存在！', {icon: 5}, function(index){
+                            layer.close(index);
+                        });
+                    }else if(data==0){
+                        layer.alert('添加失败，请重试！', {icon: 5}, function(index){
+                            layer.close(index);
+                        });
+                    }else {
+                        layer.alert('新用户添加成功！id：'+data, {icon: 1}, function(index){
+                            layer.close(index);
+                            location.replace(location.href);
+                        });
+                    }
+                }
+
+            });
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $(function(){
+            //得到当前时间
+            var date_now = new Date();
+            //得到当前年份
+            var year = date_now.getFullYear();
+            //得到当前月份
+            //注：
+            //  1：js中获取Date中的month时，会比当前月份少一个月，所以这里需要先加一
+            //  2: 判断当前月份是否小于10，如果小于，那么就在月份的前面加一个 '0' ， 如果大于，就显示当前月份
+            var month = date_now.getMonth()+1 < 10 ? "0"+(date_now.getMonth()+1) : (date_now.getMonth()+1);
+            //得到当前日子（多少号）
+            var date = date_now.getDate() < 10 ? "0"+date_now.getDate() : date_now.getDate();
+            //设置input标签的max属性
+            // $("input[name=birthday]").attr("max",year-1+"-"+month+"-"+date);
+            $("input[name=birthday]").attr("max",year-1+"-"+12+"-"+31);
+        });
+
+        layui.use('form', function() {
+            var form = layui.form;
+            //监听提交
+            form.on('submit(submitBut)', function(data) {
+                // layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    }
+
+</script>
+</body>
+</html>
