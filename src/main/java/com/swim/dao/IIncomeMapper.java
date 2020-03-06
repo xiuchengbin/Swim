@@ -15,7 +15,7 @@ public interface IIncomeMapper {
     public Integer addIncomeHistory(IncomeHistory incomeHistory);
 
     @Select("select count(income_id) from income_history")
-    public List<IncomeHistory> getAllCountIncomeHistory();
+    public Integer getAllCountIncomeHistory();
 
     @Select("select * from income_history LIMIT ${start},${limit}")
     public List<IncomeHistory> getAllIncomeHistory(Integer start, Integer limit);
